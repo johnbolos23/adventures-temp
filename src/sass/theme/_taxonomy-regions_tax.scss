@@ -1,0 +1,110 @@
+section.region-header {
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 84px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 131.73%);
+        opacity: 0.4;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+
+    .heading {
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+    }
+}
+
+section.region-description {
+    background-color: #203940;
+    padding: 123px 0 142px;
+
+    .container {
+        max-width: 955px;
+
+        .wysiwyg-content {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 140%;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+
+section.region-list-items{
+    .region-item-wrapper{
+        img {
+            width: 100%;
+            display: block;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+    
+    .region-list-items-wrapper {
+        padding: 90px 0 0;
+    }
+    
+    .region-item-details {
+        padding-top: 24px;
+
+        .region-item-name {
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 120%;
+            letter-spacing: -0.02em;
+            color: #203940;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 170%;
+            color: #13272C;
+            opacity: 0.7;
+        }
+    }
+    
+    .region-item-wrapper {
+        padding-bottom: calc( var(--bs-gutter-x) + 10px );
+    }
+    
+    .region-item-categories{
+        span {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 170%;
+            color: #203940;
+            padding: 5px 10px;
+            border-radius: 50px;
+            background: rgba(32, 57, 64, 0.12);
+
+            &:not(:last-child) {
+                margin-right: 12px;
+            }
+        }
+    }
+}

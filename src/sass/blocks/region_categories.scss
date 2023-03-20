@@ -1,0 +1,85 @@
+section.region-categories-section{
+    .region-category-item {
+        padding: calc(var(--bs-gutter-x) * .5);
+        flex: 0 0 50%;
+        width: 50%;
+
+        &:nth-child(5n + 1),
+        &:nth-child(5n + 2),
+        &:nth-child(5n + 3) {
+            flex: 0 0 33.33%;
+            width: 33.33%;
+        }
+
+        .region-category-item-wrapper {
+            height: 600px;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+                pointer-events: none;
+                transition: all 0.3s ease;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 131.73%);
+                opacity: 0.5;
+                z-index: 2;
+                transform: matrix(1, 0, 0, -1, 0, 0);
+                pointer-events: none;
+            }
+
+            .region-category-item-detail {
+                position: absolute;
+                z-index: 3;
+                bottom: 50px;
+                left: 54px;
+                color: white;
+
+                h3 {
+                    font-weight: 500;
+                    font-size: 42px;
+                    line-height: 120%;
+                    letter-spacing: -0.02em;
+                    color: #FFFFFF;
+                }
+
+                a {
+                    height: 0;
+                    display: block;
+                    overflow: hidden;
+                    transition: all 0.3s ease;
+                    text-decoration: none;
+                    opacity: 0.7;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 120%;
+                    color: white;
+                }
+            }
+
+            &:hover{
+                .region-category-item-detail{
+                    a {
+                        height: 24px;
+                    }
+                }
+
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

@@ -4,7 +4,10 @@
 @import "theme/colors";           // <-------- This creates the necessary bootstrap color classes.
 @import "theme/blocks";           // <-------- This adds Bootstrap styles to blocks.
 @import "theme/contact-form7";    // <-------- Contact Form 7 - Bootstrap 4 support
+@import "theme/gravity-form";   // <-------- Gravity Form - Bootstrap 4 support
 @import "theme/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+@import "theme/taxonomy-regions_tax";
+
 
 // Optional files - If you dont use the corresponding scripts/fonts comment em out
 @import "assets/fontawesome/font-awesome";    // <-------- Font Awesome Icon font
@@ -12,3 +15,10 @@
 // Any additional imported files //
 @import "theme/theme";            // <-------- That's where you can add your own design. Thats your part!
 
+
+// Flexible Blocks
+@import "blocks/banner_slider";
+@import "blocks/featured_region";
+@import "blocks/region_categories";
+@import "blocks/image_box";
+@import "blocks/featured_post";
