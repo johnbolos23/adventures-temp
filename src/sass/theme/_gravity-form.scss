@@ -1,0 +1,141 @@
+#adventure-distinction{
+    .gform_wrapper{
+        *{
+            font-family: 'Inter', sans-serif;
+        }
+        .gform_title{
+            display: none;
+        }
+
+        .gform_fields {
+            grid-column-gap: 8px;
+            grid-row-gap: 8px;
+        }
+
+        .ginput_container {
+            position: relative;
+        
+            input, select, textarea {
+                background: #EEF2F3;
+                border: none;
+                height: 60px;
+                padding: 10px 24px 0 !important;
+                font-size: 18px;
+
+                &::placeholder{
+                    opacity: 0;
+                    display: none;
+                    visibility: hidden;
+                }
+            }
+        
+            label {
+                position: absolute;
+                top: 50%;
+                left: 24px;
+                transform: translateY(-50%);
+                letter-spacing: -0.02em;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 100%;
+                opacity: 0.4;
+                pointer-events: none;
+                margin: 0;
+                transition: all 0.3s ease;
+                padding: 0;
+            }
+
+            textarea{
+                padding-top: 30px !important;
+                height: 110px;
+
+                + label{
+                    top: 15px;
+                    transform: unset;
+                }
+            }
+
+            select{
+                padding: 10px 20px 0!important;
+                font-size: 18px;
+
+                + label {
+                    position: absolute;
+                    top: 12px;
+                    left: 24px;
+                    font-size: 12px;
+                    transform: translateY(0);
+                    padding: 0;
+                }
+            }
+
+            span.address_country, span.address_state{
+                select{
+                    + label {
+                        left: 30px;
+                    }
+                }
+            }
+
+            &.field-has-content{
+                label {
+                    font-size: 12px;
+                    opacity: 0.7;
+                    top: 12px;
+                    transform: translateY(0);
+                }
+
+                textarea{
+                    + label{
+                        top: 12px;
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            &.ginput_container_address {
+                margin-left: -4px;
+                margin-right: -4px;
+
+                > span {
+                    padding: 0 4px;
+                }
+            }
+
+
+            &.ginput_container_date{
+                img {
+                    position: absolute;
+                    right: 24px;
+                    z-index: 2;
+                }
+
+                input {
+                    width: 100%;
+                    flex: 0 0 100%;
+                }
+            }
+        }
+
+        .gform_footer {
+            margin-top: 0;
+            padding-top: 8px;
+            padding-bottom: 0;
+        }
+
+        input[type="submit"] {
+            background-color: #000;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 16px;
+            padding: 22px;
+            text-align: center;
+            border: none;
+            min-width: 137px;
+            line-height: 1;
+        }
+    }
+}
+
+

@@ -55,3 +55,52 @@ if ( ! function_exists( 'understrap_add_site_info' ) ) {
 
 	}
 }
+
+
+add_filter( 'gform_pre_render', 'populate_region' );
+add_filter( 'gform_pre_validation', 'populate_region' );
+add_filter( 'gform_pre_submission_filter', 'populate_region' );
+add_filter( 'gform_admin_pre_render', 'populate_region' );
+function populate_region( $form ) {
+ 
+    foreach ( $form['fields'] as &$field ) {
+ 
+        if ( $field->type != 'select' || strpos( $field->cssClass, 'populate-region' ) === false ) {
+            continue;
+        }
+ 
+        // you can add additional parameters here to alter the posts that are retrieved
+        // more info: http://codex.wordpress.org/Template_Tags/get_posts
+        $args = array(
+			'post_type' => 'regions',
+			'post_status' => 'publish',
+			'posts_per_page' => -1
+		);
+
+		$theQuery = new WP_Query( $args );
+ 
+        $choices = array();
+
+		while( $theQuery->have_posts() ){
+			$theQuery->the_post();
+
+			$theTerms = get_the_terms( get_the_ID(), 'region_location' );
+
+			$termNames = '';
+
+			foreach( $theTerms as $category ){
+				$termNames .= '('. get_field('abbreviation', 'term_'. $category->term_id) .')';
+			}
+
+			$choices[] = array( 'text' => get_the_title() . ' ' . $termNames, 'value' => get_the_ID() );
+		}
+
+		wp_reset_postdata();
+ 
+        // update 'Select a Post' to whatever you'd like the instructive option to be
+        $field->choices = $choices;
+ 
+    }
+ 
+    return $form;
+}
