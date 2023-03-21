@@ -64,7 +64,6 @@ get_header();
     </div>
 </section>
 
-<?php if() : ?>
 <section class="page-section featured_post " id="featured_post-6">
     <div class="container">
         <div class="container-wrapper">
@@ -125,6 +124,8 @@ get_header();
         </div>
     </div>
 </section>
+
+
 
 
 

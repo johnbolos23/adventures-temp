@@ -13084,6 +13084,10 @@ section.region-list-items .region-item-details .region-item-name {
   color: #203940;
   margin-bottom: 16px;
 }
+section.region-list-items .region-item-details .region-item-name a {
+  text-decoration: none;
+  color: #203940;
+}
 section.region-list-items .region-item-details p {
   font-style: normal;
   font-weight: 400;

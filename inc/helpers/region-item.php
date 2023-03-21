@@ -15,7 +15,8 @@ $theCategories = get_the_terms( get_the_ID(), 'region_cat' );
         <img src="<?= get_the_post_thumbnail_url(); ?>" />
 
         <div class="region-item-details">
-            <h3 class="region-item-name"><?= get_the_title(); ?> <?= $termNames; ?></h3>
+            <h3 class="region-item-name"><a href="<?= get_the_permalink( get_the_ID() ); ?>"><?= get_the_title(); ?> <?= $termNames; ?></a></h3>
+            
             <p><?= get_the_content(); ?></p>
             <div class="region-item-categories d-flex">
                 <?php foreach( $theCategories as $category ) : ?>
