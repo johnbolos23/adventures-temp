@@ -1,0 +1,38 @@
+section.image-with-text {
+    .container-wrapper {
+        padding: 0 45px;
+        .row {
+            .col-xxl-5 {
+                padding-right: 116px;
+                margin-top: 117px;
+                img {
+                    height: 527px;
+                }
+            }
+            .col-xxl-7 {
+                padding-left: 0px;
+                margin-top: 153px;
+                h3 {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 42px;
+                    line-height: 140%;
+                    letter-spacing: -0.02em;
+                    color: #203940;
+                    margin-bottom: 38px;
+                    width: 825px;
+                }
+                p {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 170%;
+                    color: #13272C;
+                    opacity: 0.7;
+                    margin-bottom: 30.6px;
+                    width: 811px;
+                }
+            }
+        }
+    }
+}
