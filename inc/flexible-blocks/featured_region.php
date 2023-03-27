@@ -28,7 +28,7 @@ $theQuery = new WP_Query( $args );
         <div class="row m-0">
             <div class="featured-region-content col-12 col-lg-4">
                 <h2 class="heading"><?php echo get_sub_field('heading') ? get_sub_field('heading') : $featuredRegionObject->name; ?></h2>
-                <?php if( $theQuery->have_posts() ) : ?>
+                
                 <div class="featured-region-items-wrapper">
                     <div class="featured-region-items">
                     <?php if( $layoutType == 'gateway' ) : 
@@ -62,7 +62,6 @@ $theQuery = new WP_Query( $args );
                     <?php endif; ?>
                     </div>
                 </div>
-                <?php endif; ?>
             </div>
             <div class="col-12 col-lg-8 p-0">
                 <div id="custom-map-render">

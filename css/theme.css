@@ -16832,13 +16832,13 @@ section.featured-region.layout-gateway .gm-style-iw + button {
   width: 25px !important;
   height: 25px !important;
 }
-#adventure-distinction .layout-gateway .gm-style .gm-style-iw-c[role=dialog] {
-  background: #FFFFFF;
+#adventure-distinction .layout-gateway .gm-style div[role=dialog] {
+  padding: 0 10px !important;
   box-shadow: 0px 4.08474px 4.08474px rgba(0, 0, 0, 0.12);
   border-radius: 8.3146px;
-  padding: 0 10px !important;
+  background: #FFFFFF;
 }
-#adventure-distinction .layout-gateway .gm-style .gm-style-iw-c[role=dialog] + div {
+#adventure-distinction .layout-gateway .gm-style div[role=dialog] + div {
   display: none !important;
 }
 
