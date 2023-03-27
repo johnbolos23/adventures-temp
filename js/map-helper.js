@@ -78,24 +78,33 @@
             
 
             // Show info window when marker is clicked.
-            google.maps.event.addListener(marker, 'click', function() {
-                if( previousWindow ){
-                    previousWindow.close();
-                }
-                if( previousMarker ){
-                    previousMarker.setIcon(previousNormalSize);
-                }
-                previousNormalSize = normalSize;
-                previousWindow = infowindow;
-                previousMarker = marker;
+            if( $marker.data('layout-type') === 'gateway' ){
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.open( map, marker );
+                });
 
-                this.setIcon(largeSize);
-                infowindow.open( map, marker );
-            });
-
-            google.maps.event.addListener(infowindow,'closeclick',function(){
-                marker.setIcon(normalSize);
-            });
+                google.maps.event.trigger(marker,'click');
+            }else{
+                google.maps.event.addListener(marker, 'click', function() {
+                    if( previousWindow ){
+                        previousWindow.close();
+                    }
+                    if( previousMarker ){
+                        previousMarker.setIcon(previousNormalSize);
+                    }
+                    previousNormalSize = normalSize;
+                    previousWindow = infowindow;
+                    previousMarker = marker;
+    
+                    this.setIcon(largeSize);
+                    infowindow.open( map, marker );
+                });
+    
+                google.maps.event.addListener(infowindow,'closeclick',function(){
+                    marker.setIcon(normalSize);
+                });
+            }
+            
         }
 
         // Append to reference for later use.

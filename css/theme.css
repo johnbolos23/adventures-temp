@@ -13084,6 +13084,10 @@ section.region-list-items .region-item-details .region-item-name {
   color: #203940;
   margin-bottom: 16px;
 }
+section.region-list-items .region-item-details .region-item-name a {
+  text-decoration: none;
+  color: #203940;
+}
 section.region-list-items .region-item-details p {
   font-style: normal;
   font-weight: 400;
@@ -16668,6 +16672,14 @@ section.featured-region .featured-region-items .featured-region-item .region-nam
 section.featured-region .featured-region-items .featured-region-item:not(:last-child) {
   margin-bottom: 44px;
 }
+section.featured-region.layout-gateway .featured-region-items {
+  -moz-column-count: 1;
+  column-count: 1;
+  margin: 0 -15px;
+}
+section.featured-region.layout-gateway .gm-style-iw-d + button {
+  display: none !important;
+}
 
 #adventure-distinction .gm-style .gm-style-iw-c[role=dialog] {
   background: rgba(255, 255, 255, 0.5);
@@ -16686,6 +16698,15 @@ section.featured-region .featured-region-items .featured-region-item:not(:last-c
 #adventure-distinction .gm-style .gm-style-iw-c[role=dialog] button span {
   width: 25px !important;
   height: 25px !important;
+}
+#adventure-distinction .layout-gateway .gm-style div[role=dialog] {
+  padding: 0 10px !important;
+  box-shadow: 0px 4.08474px 4.08474px rgba(0, 0, 0, 0.12);
+  border-radius: 8.3146px;
+  background: #FFFFFF;
+}
+#adventure-distinction .layout-gateway .gm-style div[role=dialog] + div {
+  display: none !important;
 }
 
 .region-infowindow-container img {
@@ -16742,6 +16763,13 @@ section.featured-region .featured-region-items .featured-region-item:not(:last-c
   text-decoration: none;
   color: white;
   letter-spacing: 0.1em;
+}
+.region-infowindow-container.infowindowtype-gateway .region-name {
+  font-weight: 500;
+  font-size: 21.2874px;
+  line-height: 31px;
+  letter-spacing: -0.02em;
+  padding: 0;
 }
 
 section.region-categories-section .region-category-item {
