@@ -1,76 +1,144 @@
 <?php
-
 function cptui_register_my_cpts() {
 
-/**
- * Post Type: Regions.
- */
+	/**
+	 * Post Type: Regions.
+	 */
 
-$labels = [
-    "name" => esc_html__( "Regions", "understrap" ),
-    "singular_name" => esc_html__( "Region", "understrap" ),
-    "menu_name" => esc_html__( "Regions", "understrap" ),
-    "all_items" => esc_html__( "All Regions", "understrap" ),
-    "add_new" => esc_html__( "Add new", "understrap" ),
-    "add_new_item" => esc_html__( "Add new Region", "understrap" ),
-    "edit_item" => esc_html__( "Edit Region", "understrap" ),
-    "new_item" => esc_html__( "New Region", "understrap" ),
-    "view_item" => esc_html__( "View Region", "understrap" ),
-    "view_items" => esc_html__( "View Regions", "understrap" ),
-    "search_items" => esc_html__( "Search Regions", "understrap" ),
-    "not_found" => esc_html__( "No Regions found", "understrap" ),
-    "not_found_in_trash" => esc_html__( "No Regions found in trash", "understrap" ),
-    "parent" => esc_html__( "Parent Region:", "understrap" ),
-    "featured_image" => esc_html__( "Featured image for this Region", "understrap" ),
-    "set_featured_image" => esc_html__( "Set featured image for this Region", "understrap" ),
-    "remove_featured_image" => esc_html__( "Remove featured image for this Region", "understrap" ),
-    "use_featured_image" => esc_html__( "Use as featured image for this Region", "understrap" ),
-    "archives" => esc_html__( "Region archives", "understrap" ),
-    "insert_into_item" => esc_html__( "Insert into Region", "understrap" ),
-    "uploaded_to_this_item" => esc_html__( "Upload to this Region", "understrap" ),
-    "filter_items_list" => esc_html__( "Filter Regions list", "understrap" ),
-    "items_list_navigation" => esc_html__( "Regions list navigation", "understrap" ),
-    "items_list" => esc_html__( "Regions list", "understrap" ),
-    "attributes" => esc_html__( "Regions attributes", "understrap" ),
-    "name_admin_bar" => esc_html__( "Region", "understrap" ),
-    "item_published" => esc_html__( "Region published", "understrap" ),
-    "item_published_privately" => esc_html__( "Region published privately.", "understrap" ),
-    "item_reverted_to_draft" => esc_html__( "Region reverted to draft.", "understrap" ),
-    "item_scheduled" => esc_html__( "Region scheduled", "understrap" ),
-    "item_updated" => esc_html__( "Region updated.", "understrap" ),
-    "parent_item_colon" => esc_html__( "Parent Region:", "understrap" ),
-];
+	$labels = [
+		"name" => esc_html__( "Regions", "understrap" ),
+		"singular_name" => esc_html__( "Region", "understrap" ),
+		"menu_name" => esc_html__( "Regions", "understrap" ),
+		"all_items" => esc_html__( "All Regions", "understrap" ),
+		"add_new" => esc_html__( "Add new", "understrap" ),
+		"add_new_item" => esc_html__( "Add new Region", "understrap" ),
+		"edit_item" => esc_html__( "Edit Region", "understrap" ),
+		"new_item" => esc_html__( "New Region", "understrap" ),
+		"view_item" => esc_html__( "View Region", "understrap" ),
+		"view_items" => esc_html__( "View Regions", "understrap" ),
+		"search_items" => esc_html__( "Search Regions", "understrap" ),
+		"not_found" => esc_html__( "No Regions found", "understrap" ),
+		"not_found_in_trash" => esc_html__( "No Regions found in trash", "understrap" ),
+		"parent" => esc_html__( "Parent Region:", "understrap" ),
+		"featured_image" => esc_html__( "Featured image for this Region", "understrap" ),
+		"set_featured_image" => esc_html__( "Set featured image for this Region", "understrap" ),
+		"remove_featured_image" => esc_html__( "Remove featured image for this Region", "understrap" ),
+		"use_featured_image" => esc_html__( "Use as featured image for this Region", "understrap" ),
+		"archives" => esc_html__( "Region archives", "understrap" ),
+		"insert_into_item" => esc_html__( "Insert into Region", "understrap" ),
+		"uploaded_to_this_item" => esc_html__( "Upload to this Region", "understrap" ),
+		"filter_items_list" => esc_html__( "Filter Regions list", "understrap" ),
+		"items_list_navigation" => esc_html__( "Regions list navigation", "understrap" ),
+		"items_list" => esc_html__( "Regions list", "understrap" ),
+		"attributes" => esc_html__( "Regions attributes", "understrap" ),
+		"name_admin_bar" => esc_html__( "Region", "understrap" ),
+		"item_published" => esc_html__( "Region published", "understrap" ),
+		"item_published_privately" => esc_html__( "Region published privately.", "understrap" ),
+		"item_reverted_to_draft" => esc_html__( "Region reverted to draft.", "understrap" ),
+		"item_scheduled" => esc_html__( "Region scheduled", "understrap" ),
+		"item_updated" => esc_html__( "Region updated.", "understrap" ),
+		"parent_item_colon" => esc_html__( "Parent Region:", "understrap" ),
+	];
 
-$args = [
-    "label" => esc_html__( "Regions", "understrap" ),
-    "labels" => $labels,
-    "description" => "",
-    "public" => true,
-    "publicly_queryable" => true,
-    "show_ui" => true,
-    "show_in_rest" => true,
-    "rest_base" => "",
-    "rest_controller_class" => "WP_REST_Posts_Controller",
-    "rest_namespace" => "wp/v2",
-    "has_archive" => false,
-    "show_in_menu" => true,
-    "show_in_nav_menus" => true,
-    "delete_with_user" => false,
-    "exclude_from_search" => false,
-    "capability_type" => "post",
-    "map_meta_cap" => true,
-    "hierarchical" => false,
-    "can_export" => false,
-    "rewrite" => [ "slug" => "regions", "with_front" => true ],
-    "query_var" => true,
-    "supports" => [ "title", "editor", "thumbnail" ],
-    "show_in_graphql" => false,
-];
+	$args = [
+		"label" => esc_html__( "Regions", "understrap" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "regions", "with_front" => true ],
+		"query_var" => true,
+		"supports" => [ "title", "editor", "thumbnail" ],
+		"show_in_graphql" => false,
+	];
 
-register_post_type( "regions", $args );
+	register_post_type( "regions", $args );
+
+	/**
+	 * Post Type: Gateways.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "Gateways", "understrap" ),
+		"singular_name" => esc_html__( "Gateway", "understrap" ),
+		"menu_name" => esc_html__( "Gateways", "understrap" ),
+		"all_items" => esc_html__( "All Gateways", "understrap" ),
+		"add_new" => esc_html__( "Add new", "understrap" ),
+		"add_new_item" => esc_html__( "Add new Gateway", "understrap" ),
+		"edit_item" => esc_html__( "Edit Gateway", "understrap" ),
+		"new_item" => esc_html__( "New Gateway", "understrap" ),
+		"view_item" => esc_html__( "View Gateway", "understrap" ),
+		"view_items" => esc_html__( "View Gateways", "understrap" ),
+		"search_items" => esc_html__( "Search Gateways", "understrap" ),
+		"not_found" => esc_html__( "No Gateways found", "understrap" ),
+		"not_found_in_trash" => esc_html__( "No Gateways found in trash", "understrap" ),
+		"parent" => esc_html__( "Parent Gateway:", "understrap" ),
+		"featured_image" => esc_html__( "Featured image for this Gateway", "understrap" ),
+		"set_featured_image" => esc_html__( "Set featured image for this Gateway", "understrap" ),
+		"remove_featured_image" => esc_html__( "Remove featured image for this Gateway", "understrap" ),
+		"use_featured_image" => esc_html__( "Use as featured image for this Gateway", "understrap" ),
+		"archives" => esc_html__( "Gateway archives", "understrap" ),
+		"insert_into_item" => esc_html__( "Insert into Gateway", "understrap" ),
+		"uploaded_to_this_item" => esc_html__( "Upload to this Gateway", "understrap" ),
+		"filter_items_list" => esc_html__( "Filter Gateways list", "understrap" ),
+		"items_list_navigation" => esc_html__( "Gateways list navigation", "understrap" ),
+		"items_list" => esc_html__( "Gateways list", "understrap" ),
+		"attributes" => esc_html__( "Gateways attributes", "understrap" ),
+		"name_admin_bar" => esc_html__( "Gateway", "understrap" ),
+		"item_published" => esc_html__( "Gateway published", "understrap" ),
+		"item_published_privately" => esc_html__( "Gateway published privately.", "understrap" ),
+		"item_reverted_to_draft" => esc_html__( "Gateway reverted to draft.", "understrap" ),
+		"item_scheduled" => esc_html__( "Gateway scheduled", "understrap" ),
+		"item_updated" => esc_html__( "Gateway updated.", "understrap" ),
+		"parent_item_colon" => esc_html__( "Parent Gateway:", "understrap" ),
+	];
+
+	$args = [
+		"label" => esc_html__( "Gateways", "understrap" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => false,
+		"show_in_menu" => "edit.php?post_type=regions",
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "gateways", "with_front" => true ],
+		"query_var" => true,
+		"supports" => [ "title", "editor", "thumbnail" ],
+		"taxonomies" => [ "regions_tax", "region_location" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "gateways", $args );
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );
+
     
 
 function cptui_register_my_taxes() {
