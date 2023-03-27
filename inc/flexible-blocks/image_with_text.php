@@ -1,4 +1,4 @@
-<section class="page-section image-with-text <?php echo get_sub_field('position') == 'left' ? 'left-layout' : 'right-layout'; ?>" id="image-with-text-<?= get_row_index(); ?>">
+<section class="page-section image-with-text <?php echo get_sub_field('position'); ?>-layout" id="image-with-text-<?= get_row_index(); ?>">
     <div class="container">
         <div class="container-wrapper">
             <div class="row <?php echo get_sub_field('position') == 'right' ? 'flex-row-reverse' : ''; ?>">

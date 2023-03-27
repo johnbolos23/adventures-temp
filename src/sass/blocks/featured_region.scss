@@ -49,10 +49,7 @@ section.featured-region {
             column-count: 1;
             margin: 0 -15px;
         }
-
-        .gm-style-iw-d + button {display: none !important;}
-
-        
+        .gm-style-iw + button {display: none !important;}
     }
 }
 
@@ -83,11 +80,11 @@ section.featured-region {
 
     .layout-gateway{
         .gm-style{
-            div[role="dialog"]{
-                padding: 0 10px !important;
+            .gm-style-iw-c[role="dialog"] {
+                background: #FFFFFF;
                 box-shadow: 0px 4.08474px 4.08474px rgba(0, 0, 0, 0.12);
                 border-radius: 8.3146px;
-                background: #FFFFFF;
+                padding: 0 10px !important;
                 + div{
                     display: none !important;
                 }
@@ -157,12 +154,12 @@ section.featured-region {
     }
 
     &.infowindowtype-gateway{
-        .region-name{
+        .region-name {
             font-weight: 500;
             font-size: 21.2874px;
             line-height: 31px;
             letter-spacing: -0.02em;
-            padding: 0;
+            padding: 0 !important;
         }
     }
 }

@@ -7,6 +7,8 @@
 @import "theme/gravity-form";   // <-------- Gravity Form - Bootstrap 4 support
 @import "theme/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
 @import "theme/taxonomy-regions_tax";
+@import "theme/single-regions";
+
 
 
 // Optional files - If you dont use the corresponding scripts/fonts comment em out
@@ -22,3 +24,5 @@
 @import "blocks/region_categories";
 @import "blocks/image_box";
 @import "blocks/featured_post";
+@import "blocks/image_with_text";
+@import "blocks/type_of_region";
