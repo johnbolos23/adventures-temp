@@ -17106,4 +17106,35 @@ section.image-with-text .container-wrapper .row .col-xxl-7 p {
   width: 811px;
 }
 
+section.types-of-region .container-wrapper {
+  padding: 0 45px;
+  margin-top: 116px;
+}
+section.types-of-region .container-wrapper .row {
+  justify-content: center;
+}
+section.types-of-region .container-wrapper .row .col-xxl-4 {
+  align-self: self-end;
+}
+section.types-of-region .container-wrapper .row .col-xxl-4 .icon {
+  margin-bottom: 32px;
+}
+section.types-of-region .container-wrapper .row .col-xxl-4 h6, section.types-of-region .container-wrapper .row .col-xxl-4 .h6 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #203940;
+  margin-bottom: 6px;
+}
+section.types-of-region .container-wrapper .row .col-xxl-4 p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 170%;
+  color: #13272C;
+  opacity: 0.7;
+  margin-bottom: 70px;
+}
+
 /*# sourceMappingURL=theme.css.map */
