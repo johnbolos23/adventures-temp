@@ -1,7 +1,7 @@
-<section class="page-section image-with-text" id="image-with-text-<?= get_row_index(); ?>">
+<section class="page-section image-with-text <?php echo get_sub_field('position'); ?>-layout" id="image-with-text-<?= get_row_index(); ?>">
     <div class="container">
         <div class="container-wrapper">
-            <div class="row">
+            <div class="row <?php echo get_sub_field('position') == 'right' ? 'flex-row-reverse' : ''; ?>">
                 <div class="col-xxl-5 col-xl-5">
                     <img src="<?= get_sub_field('image'); ?>" />
                 </div>

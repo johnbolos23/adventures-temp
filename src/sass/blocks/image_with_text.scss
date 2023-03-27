@@ -35,4 +35,17 @@ section.image-with-text {
             }
         }
     }
+
+    &.right-layout{
+        .container-wrapper{
+            .row{
+                .col-xxl-5 {
+                    padding-right: 0;
+                }
+                .col-xxl-7 {
+                    padding-right: 116px;
+                }
+            }
+        }
+    }
 }
