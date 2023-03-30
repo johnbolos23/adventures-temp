@@ -17096,18 +17096,22 @@ section.featured_post .post-item:nth-child(4) .post-read-more {
 }
 
 section.image-with-text .container-wrapper {
-  padding: 0 45px;
+  padding: 0 60px;
+}
+section.image-with-text .container-wrapper .row {
+  margin-top: 117px;
 }
 section.image-with-text .container-wrapper .row .col-xxl-5 {
-  padding-right: 116px;
-  margin-top: 117px;
+  padding-left: initial;
+  padding-right: initial;
 }
 section.image-with-text .container-wrapper .row .col-xxl-5 img {
   height: 527px;
 }
 section.image-with-text .container-wrapper .row .col-xxl-7 {
-  padding-left: 0px;
-  margin-top: 153px;
+  padding-left: 49px;
+  padding-right: initial;
+  margin: auto;
 }
 section.image-with-text .container-wrapper .row .col-xxl-7 h3, section.image-with-text .container-wrapper .row .col-xxl-7 .h3 {
   font-style: normal;
@@ -17117,7 +17121,6 @@ section.image-with-text .container-wrapper .row .col-xxl-7 h3, section.image-wit
   letter-spacing: -0.02em;
   color: #203940;
   margin-bottom: 38px;
-  width: 825px;
 }
 section.image-with-text .container-wrapper .row .col-xxl-7 p {
   font-style: normal;
@@ -17127,13 +17130,30 @@ section.image-with-text .container-wrapper .row .col-xxl-7 p {
   color: #13272C;
   opacity: 0.7;
   margin-bottom: 30.6px;
-  width: 811px;
+}
+section.image-with-text.right-layout .container-wrapper {
+  padding: 0 60px;
+}
+section.image-with-text.right-layout .container-wrapper .row {
+  margin-top: 46px;
 }
 section.image-with-text.right-layout .container-wrapper .row .col-xxl-5 {
-  padding-right: 0;
+  margin-top: initial;
+  padding-right: initial;
+  padding-left: initial;
+}
+section.image-with-text.right-layout .container-wrapper .row .col-xxl-5 img {
+  float: right;
 }
 section.image-with-text.right-layout .container-wrapper .row .col-xxl-7 {
-  padding-right: 116px;
+  margin: auto;
+  padding-left: initial;
+  padding-right: 49px;
+}
+section.image-with-text.right-layout .container-wrapper .row .col-xxl-7 h3, section.image-with-text.right-layout .container-wrapper .row .col-xxl-7 .h3 {
+  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: 400;
 }
 
 section.types-of-region .container-wrapper {
@@ -17165,6 +17185,107 @@ section.types-of-region .container-wrapper .row .col-xxl-4 p {
   color: #13272C;
   opacity: 0.7;
   margin-bottom: 70px;
+}
+
+section.steps .container-wrapper {
+  padding: 0 45px;
+  margin-top: 116px;
+}
+section.steps .container-wrapper .row h3, section.steps .container-wrapper .row .h3 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: #203940;
+  margin-bottom: 68px;
+}
+section.steps .container-wrapper .row .col h6, section.steps .container-wrapper .row .col .h6 {
+  padding-top: 25px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #203940;
+  margin-bottom: initial;
+}
+section.steps .container-wrapper .row .col .number-wrapper {
+  background: #F1F5F5;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 750px;
+  margin: auto;
+  margin-top: 26px;
+  margin-bottom: 21px;
+}
+section.steps .container-wrapper .row .col .number-wrapper h5, section.steps .container-wrapper .row .col .number-wrapper .h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #203940;
+  opacity: 0.4;
+}
+section.steps .container-wrapper .row .col p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 170%;
+  color: #13272C;
+  opacity: 0.7;
+  margin-bottom: initial;
+}
+
+section.steps .container-wrapper {
+  margin-top: 97px;
+  margin-bottom: 11px;
+  padding: 0 45px;
+}
+section.steps .container-wrapper .row .download-wrapper {
+  background: #F1F5F6;
+  width: 996px;
+  padding: 31px 44px 32px 38px;
+}
+section.steps .container-wrapper .row .download-wrapper svg {
+  vertical-align: top;
+}
+section.steps .container-wrapper .row .download-wrapper .download-content {
+  display: inline-block;
+  padding-left: 24px;
+  padding-right: 182px;
+}
+section.steps .container-wrapper .row .download-wrapper .download-content p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #203940;
+  margin-bottom: initial;
+}
+section.steps .container-wrapper .row .download-wrapper .download-content p.file-size {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 170%;
+  color: #13272C;
+  opacity: 0.7;
+}
+section.steps .container-wrapper .row .download-wrapper .btn.cta-dowload-button, section.steps .container-wrapper .row .download-wrapper .wpcf7 input.cta-dowload-button[type=submit], .wpcf7 section.steps .container-wrapper .row .download-wrapper input.cta-dowload-button[type=submit], section.steps .container-wrapper .row .download-wrapper .woocommerce-notices-wrapper .woocommerce-message a.cta-dowload-button.button, .woocommerce-notices-wrapper .woocommerce-message section.steps .container-wrapper .row .download-wrapper a.cta-dowload-button.button, section.steps .container-wrapper .row .download-wrapper .woocommerce-info a.cta-dowload-button.button, .woocommerce-info section.steps .container-wrapper .row .download-wrapper a.cta-dowload-button.button {
+  width: 177px;
+  height: 60px;
+  background: #000000;
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  border-radius: initial;
 }
 
 /*# sourceMappingURL=theme.css.map */
