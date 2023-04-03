@@ -1,4 +1,4 @@
-<section class="page-section steps" id="steps-<?= get_row_index(); ?>">
+<section class="page-section cta-download" id="steps-<?= get_row_index(); ?>">
     <div class="container">
         <div class="container-wrapper">
             <div class="row justify-content-center">

@@ -1,0 +1,52 @@
+section.popular-combinations {
+    padding-bottom: 18px;
+    .container-wrapper {
+        margin-top: 117px;
+        padding: 0 45px;
+        .row {
+            all: unset;
+            .content-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 63px;
+                row-gap: 56px;
+                padding: initial;
+                .column {
+                    width: fit-content;
+                    svg {
+                        position: absolute;
+                        margin-left: -1px;
+                    }
+                    h4 {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 36px;
+                        line-height: 120%;
+                        letter-spacing: -0.02em;
+                        color: #203940;
+                        margin-top: 42px;
+                        margin-bottom: 12px;
+                    }
+                    .location {
+                        .map-icon {
+                            display: inline-block;
+                            vertical-align: super;
+                        }
+                        p {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 170%;
+                        color: #13272C;
+                        opacity: 0.7;
+                        margin-bottom: initial;
+                        margin-left: 32px;
+                        display: inline-block;
+                        vertical-align: top;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
