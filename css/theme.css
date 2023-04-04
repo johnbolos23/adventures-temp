@@ -13118,15 +13118,16 @@ section.single-region-description {
   margin-bottom: 69.4px;
 }
 section.single-region-description .col-xxl-3 {
-  padding-left: 0px;
-  margin-right: 0px;
+  padding-left: 0;
+  margin-right: 0;
   padding-right: 110px;
 }
 section.single-region-description .col-xxl-3 img {
   padding-top: 87px;
 }
 section.single-region-description .col-xxl-5 {
-  padding-left: 0px;
+  padding-left: 0;
+  padding-right: 0;
 }
 section.single-region-description .col-xxl-5 h3, section.single-region-description .col-xxl-5 .h3 {
   font-style: normal;
@@ -13135,7 +13136,7 @@ section.single-region-description .col-xxl-5 h3, section.single-region-descripti
   line-height: 120%;
   letter-spacing: -0.02em;
   color: #203940;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   padding-bottom: 29px;
 }
 section.single-region-description .col-xxl-5 p {
@@ -13149,7 +13150,8 @@ section.single-region-description .col-xxl-5 p {
   max-width: 740px;
 }
 section.single-region-description .col-xxl-4 {
-  padding-left: 0px;
+  padding-left: 85px;
+  padding-right: 0;
 }
 
 section.single-region-about {
@@ -17362,6 +17364,77 @@ section.popular-combinations .container-wrapper .row .content-wrapper .column .l
   margin-left: 32px;
   display: inline-block;
   vertical-align: top;
+}
+
+section.sample-itineraries {
+  padding-bottom: 39px;
+}
+section.sample-itineraries .container-wrapper {
+  margin-top: 92px;
+  padding: 0 45px;
+}
+section.sample-itineraries .container-wrapper .row {
+  margin: 0;
+}
+section.sample-itineraries .container-wrapper .row .col-xxl-12 {
+  padding: 0;
+}
+section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content {
+  display: flex;
+  align-items: center;
+  padding: 0px 9px 0px 0px;
+  margin-bottom: 50px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+}
+section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content .text-content {
+  padding-left: 69px;
+  padding-right: 49px;
+}
+section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content .text-content .sample-itineraries-title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #13272C;
+  margin-bottom: 14px;
+}
+section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content .text-content .wysiwyg-destination {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #203940;
+  opacity: 0.7;
+  margin-bottom: 31px;
+}
+section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content .text-content .sample-itineraries-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 170%;
+  color: #13272C;
+  opacity: 0.7;
+  margin-bottom: 0;
+}
+section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content .map-placeholder {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+section.sample-itineraries .container-wrapper .row .more-itineraries {
+  background: #000000;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  width: 237px;
+  height: 60px;
+  border-radius: initial;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=theme.css.map */
