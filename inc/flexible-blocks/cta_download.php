@@ -8,7 +8,7 @@
                         <p><?php echo get_sub_field('file_name'); ?></p>
                         <p class="file-size"><?php echo get_sub_field('file_size'); ?></p>
                     </div>
-                    <div class="btn cta-dowload-button">Download</div>
+                    <div class="btn cta-download-button">Download</div>
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@ get_header();
     </div>
 </section>
 
-<section class="region-header pos-relative" style="background-image: url(<?php echo get_field('image'); ?>);" id="region-header-<?= get_row_index(); ?>">
+<section class="region-header pos-relative <?php echo get_sub_field('text_position'); ?>-layout" style="background-image: url(<?php echo get_field('image'); ?>);" id="region-header-<?= get_row_index(); ?>">
     <div class="container pos-relative">
         <h1 class="heading"><?php echo get_field('heading'); ?></h1>
     </div>
