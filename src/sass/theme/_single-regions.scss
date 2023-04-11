@@ -2,15 +2,16 @@ section.single-region-description {
     margin-top: 105px;
     margin-bottom: 69.4px;
     .col-xxl-3 {
-        padding-left: 0px;
-        margin-right: 0px;
+        padding-left: 0;
+        margin-right: 0;
         padding-right: 110px;
         img {
             padding-top: 87px;
         }
     }
     .col-xxl-5 {
-        padding-left: 0px;
+        padding-left: 0;
+        padding-right: 0;
         h3 {
             font-style: normal;
             font-weight: 500;
@@ -18,7 +19,7 @@ section.single-region-description {
             line-height: 120%;
             letter-spacing: -0.02em;
             color: #203940;
-            margin-bottom: 0px;
+            margin-bottom: 0;
             padding-bottom: 29px;
         }
         p {
@@ -33,7 +34,8 @@ section.single-region-description {
         }
     }
     .col-xxl-4 {
-        padding-left: 0px;
+        padding-left: 85px;
+        padding-right: 0;
     }
 }
 

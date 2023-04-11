@@ -31,7 +31,7 @@ get_header();
             </div>
             <div class="col-xxl-4 col-xl-4 text-center">
                 <div class="map">
-                    MAP HERE
+                    <img src="http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/Mask-group-1.png">
                 </div>
             </div>
         </div>
