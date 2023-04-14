@@ -65,7 +65,7 @@ get_header();
                 <div class="col-xxl-9 col-xl-9">
                     <h3>Summary</h3>
                     <?php foreach( get_field('summary') as $item ) : ?>
-                        <div class="test">
+                        <div class="summary-wrapper">
                             <p class="summary_labels"><?php echo $item['summary_labels'];?></p>
                             <p class="summary_labels_description"><?php echo $item['summary_labels_description'];?></p>
                         </div>

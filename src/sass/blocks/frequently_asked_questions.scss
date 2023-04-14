@@ -1,9 +1,10 @@
 section.frequently-asked-questions {
     .container-wrapper {
-        padding: 0 45px;
+        padding: 0 169px;
         .row {
             .col-xxl-12 {
                 margin-top: 117px;
+                margin-bottom: 28px;
                 .accordion {
                     font-style: normal;
                     font-weight: 500;
@@ -19,21 +20,18 @@ section.frequently-asked-questions {
                     text-align: left;
                     outline: none;
                     transition: 0.4s;
-                    &:after {
-                        content: '\002B';
+                    &:before {
+                        content: url("http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/plus-sign.png");
                         color: #777;
                         font-weight: bold;
                         float: right;
                         margin-left: 5px;
                     }
                 }
-                // .active,
-                // .accordion:hover {
-                //     background-color: #ccc;
-                // }
                 .active {
-                    &:after {
-                        content: "\2212";
+                    &:before {
+                        content: url("http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/minus-sign.png");
+                        margin-right: -13px;
                     }
                 }
                 .accordion-content {
@@ -53,6 +51,16 @@ section.frequently-asked-questions {
                             color: #13272C;
                             opacity: 0.7;
                             padding-bottom: 12px;
+                            list-style-type: none;
+                            &:before {
+                                content: url("http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/check-circle.png");
+                                margin-right: 16px;
+                                    display: inline-flex;
+                                    vertical-align: middle;
+                            }
+                            &:last-child {
+                                padding-bottom: 0;
+                            }
                         }
                     }
                 }

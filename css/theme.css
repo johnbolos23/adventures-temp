@@ -13063,6 +13063,9 @@ section.region-description .container .wysiwyg-content p {
   margin-bottom: 0;
 }
 
+section.region-list-items {
+  margin-bottom: 30px;
+}
 section.region-list-items .region-item-wrapper img {
   width: 100%;
   display: block;
@@ -13190,6 +13193,9 @@ section.single-region-about .col-xxl-9 p {
   max-width: 740px;
 }
 
+section.single-region-summary {
+  margin-bottom: 50px;
+}
 section.single-region-summary .col-xxl-3 {
   margin-top: 87px;
   padding-left: 0px;
@@ -13219,15 +13225,15 @@ section.single-region-summary .col-xxl-9 p {
   opacity: 0.7;
   margin-bottom: 24px;
 }
-section.single-region-summary .col-xxl-9 .test {
+section.single-region-summary .col-xxl-9 .summary-wrapper {
   display: flex;
 }
-section.single-region-summary .col-xxl-9 .test p.summary_labels {
+section.single-region-summary .col-xxl-9 .summary-wrapper p.summary_labels {
   flex: 0 0 204px;
   margin-right: 46px;
   height: 41px;
 }
-section.single-region-summary .col-xxl-9 .test p.summary_labels_description {
+section.single-region-summary .col-xxl-9 .summary-wrapper p.summary_labels_description {
   font-weight: 400;
   max-width: 490px;
 }
@@ -16283,17 +16289,35 @@ section.single-region-summary .col-xxl-9 .contact_us p a {
   overflow: hidden;
 }
 
-.pos-relative, .relative {
+.pos-relative,
+.relative {
   position: relative;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
-@media (min-width: 1480px) {
+@media (max-width: 9999px) {
   .container {
-    max-width: 1640px;
+    max-width: 1685px;
+  }
+}
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1204px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 712px;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 
@@ -16621,7 +16645,8 @@ div#header-mega-menu .header-email .header-email-details a i {
 #main-footer {
   padding: 110px 0 100px;
 }
-#main-footer .footer-top-content, #main-footer .footer-bottom-content {
+#main-footer .footer-top-content,
+#main-footer .footer-bottom-content {
   padding: 0 45px;
 }
 #main-footer .footer-bottom-content {
@@ -16694,6 +16719,16 @@ section.breadcrumbs-section a {
   opacity: 0.7;
   text-decoration: none;
 }
+@media (max-width: 1280px) {
+  section.breadcrumbs-section a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  section.breadcrumbs-section a {
+    font-size: 12px;
+  }
+}
 section.breadcrumbs-section svg {
   margin: 0 16px;
   transform: translateY(-2px);
@@ -16702,6 +16737,16 @@ section.breadcrumbs-section span {
   font-size: 16px;
   line-height: 170%;
   color: #13272C;
+}
+@media (max-width: 1280px) {
+  section.breadcrumbs-section span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  section.breadcrumbs-section span {
+    font-size: 12px;
+  }
 }
 
 section.banner-slider .banner-slider-item-wrapper {
@@ -16979,6 +17024,7 @@ section.region-categories-section .region-category-item .region-category-item-wr
 
 section.image-box {
   margin-top: 125px;
+  margin-bottom: 54px;
 }
 section.image-box .container-wrapper {
   padding: 0 45px;
@@ -17016,7 +17062,6 @@ section.image-box .container-wrapper .flex-row-reverse .col-wrapper.image-box-co
 }
 
 section.featured_post {
-  margin-top: 50px;
   padding-top: 70px;
   padding-bottom: 66px;
 }
@@ -17248,7 +17293,7 @@ section.steps .container-wrapper .row .col p {
 
 section.cta-download .container-wrapper {
   margin-top: 97px;
-  margin-bottom: 11px;
+  margin-bottom: 61px;
   padding: 0 45px;
 }
 section.cta-download .container-wrapper .row .download-wrapper {
@@ -17294,26 +17339,82 @@ section.cta-download .container-wrapper .row .download-wrapper .btn.cta-download
 }
 
 section.banner {
-  min-height: 400px;
   display: flex;
-  align-items: flex-end;
-  padding-bottom: 68px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: center;
 }
-section.banner .container .heading {
+section.banner img {
+  max-width: initial;
+}
+@media (max-width: 1280px) {
+  section.banner .for-desktop {
+    display: none;
+  }
+}
+section.banner .for-laptop {
+  display: none;
+}
+@media (max-width: 1280px) {
+  section.banner .for-laptop {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  section.banner .for-laptop {
+    display: none;
+  }
+}
+section.banner .for-tablet {
+  display: none;
+}
+@media (max-width: 768px) {
+  section.banner .for-tablet {
+    display: block;
+  }
+}
+@media (max-width: 376px) {
+  section.banner .for-tablet {
+    display: none;
+  }
+}
+@media (max-width: 9999px) {
+  section.banner .for-mobile {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  section.banner .for-mobile {
+    display: block;
+  }
+}
+section.banner .text-wrapper {
+  position: absolute;
+}
+section.banner .text-wrapper .heading {
   font-style: normal;
   font-weight: 500;
   font-size: 56px;
   line-height: 110%;
   letter-spacing: -0.02em;
   color: #FFFFFF;
-  margin-bottom: initial;
+  margin-bottom: 0;
+  padding-top: 267px;
+}
+@media (max-width: 1280px) {
+  section.banner .text-wrapper .heading {
+    font-size: 48px;
+    line-height: 120%;
+    padding-top: 188px;
+  }
+}
+@media (max-width: 767px) {
+  section.banner .text-wrapper .heading {
+    font-size: 32px;
+    padding-top: 208px;
+  }
 }
 
 section.popular-combinations {
-  padding-bottom: 18px;
+  margin-bottom: 68px;
 }
 section.popular-combinations .container-wrapper {
   margin-top: 117px;
@@ -17369,28 +17470,178 @@ section.popular-combinations .container-wrapper .row .content-wrapper .column .l
 section.sample-itineraries {
   padding-bottom: 39px;
 }
-section.sample-itineraries .container-wrapper {
-  margin-top: 92px;
-  padding: 0 45px;
+@media (max-width: 992px) {
+  section.sample-itineraries {
+    padding-bottom: 30px;
+  }
 }
-section.sample-itineraries .container-wrapper .row {
+@media (max-width: 767px) {
+  section.sample-itineraries {
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 768px) {
+  section.sample-itineraries .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media (max-width: 767px) {
+  section.sample-itineraries .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+section.sample-itineraries .container .container-wrapper {
+  margin-top: 92px;
+  padding: 0 48px;
+}
+@media (max-width: 1440px) {
+  section.sample-itineraries .container .container-wrapper {
+    margin-top: 88px;
+  }
+}
+@media (max-width: 1280px) {
+  section.sample-itineraries .container .container-wrapper {
+    margin-top: 88px;
+    padding: 0;
+  }
+}
+@media (max-width: 992px) {
+  section.sample-itineraries .container .container-wrapper {
+    margin-top: 38px;
+  }
+}
+@media (max-width: 992px) {
+  section.sample-itineraries .container .container-wrapper {
+    margin-top: 24px;
+  }
+}
+section.sample-itineraries .container .container-wrapper .row {
   margin: 0;
 }
-section.sample-itineraries .container-wrapper .row .col-xxl-12 {
+section.sample-itineraries .container .container-wrapper .row .col-xxl-12 {
   padding: 0;
 }
-section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content {
+section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content {
   display: flex;
   align-items: center;
   padding: 0px 9px 0px 0px;
   margin-bottom: 50px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
 }
-section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content .text-content {
+@media (max-width: 1440px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 890px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content {
+    display: block;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 42px;
+  }
+}
+@media (max-width: 767px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content {
+    margin-top: 36px;
+  }
+}
+@media (max-width: 1440px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .for-desktop {
+    width: 281px;
+    height: 350px;
+  }
+}
+@media (max-width: 890px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .for-desktop {
+    display: none;
+  }
+}
+section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .for-tablet {
+  display: none;
+}
+@media (max-width: 890px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .for-tablet {
+    display: block;
+    width: -webkit-fill-available;
+  }
+}
+section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .sample-itineraries-title-for-tablet {
+  display: none;
+}
+@media (max-width: 890px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .sample-itineraries-title-for-tablet {
+    font-size: 28px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #13272C;
+    display: block;
+    margin: 36px 0px 14px 36px;
+  }
+}
+@media (max-width: 767px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .sample-itineraries-title-for-tablet {
+    font-size: 24px;
+    line-height: 120%;
+    display: block;
+    margin: 24px 24px 14px 24px;
+  }
+}
+section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper {
+  display: contents;
+}
+@media (max-width: 890px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper {
+    display: flex;
+    padding-right: 24px;
+    padding-bottom: 29px;
+  }
+}
+@media (max-width: 767px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper {
+    display: inherit;
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+}
+section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content {
   padding-left: 69px;
   padding-right: 49px;
 }
-section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content .text-content .sample-itineraries-title {
+@media (max-width: 1440px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content {
+    padding: 0px 26px 0px 35px;
+    padding-left: 35px;
+    padding-right: 26px;
+  }
+}
+@media (max-width: 992px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content {
+    padding: 0px 0px 0px 26px;
+    display: inline-block;
+  }
+}
+@media (max-width: 890px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content {
+    padding: 0px 0px 0px 36px;
+    display: inline-block;
+  }
+}
+@media (max-width: 890px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content {
+    padding: 0px 0px 0px 24px;
+    display: inline-block;
+  }
+}
+@media (max-width: 767px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content {
+    padding: 0px 24px 0px 24px;
+    display: inline-block;
+  }
+}
+section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .sample-itineraries-title-for-desktop {
   font-weight: 500;
   font-size: 36px;
   line-height: 120%;
@@ -17398,7 +17649,17 @@ section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itinerari
   color: #13272C;
   margin-bottom: 14px;
 }
-section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content .text-content .wysiwyg-destination {
+@media (max-width: 1440px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .sample-itineraries-title-for-desktop {
+    font-size: 28px;
+  }
+}
+@media (max-width: 890px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .sample-itineraries-title-for-desktop {
+    display: none;
+  }
+}
+section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .wysiwyg-destination {
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
@@ -17407,7 +17668,18 @@ section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itinerari
   opacity: 0.7;
   margin-bottom: 31px;
 }
-section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content .text-content .sample-itineraries-description {
+@media (max-width: 1440px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .wysiwyg-destination {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .wysiwyg-destination {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+}
+section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .sample-itineraries-description {
   font-weight: 400;
   font-size: 18px;
   line-height: 170%;
@@ -17415,12 +17687,54 @@ section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itinerari
   opacity: 0.7;
   margin-bottom: 0;
 }
-section.sample-itineraries .container-wrapper .row .col-xxl-12 .sample-itineraries-content .map-placeholder {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+@media (max-width: 1440px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .sample-itineraries-description {
+    font-size: 16px;
+  }
 }
-section.sample-itineraries .container-wrapper .row .more-itineraries {
+@media (max-width: 992px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .sample-itineraries-description {
+    width: 345px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 890px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .sample-itineraries-description {
+    width: 506px;
+    margin-right: 36px;
+  }
+}
+@media (max-width: 768px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .sample-itineraries-description {
+    width: 375px;
+  }
+}
+@media (max-width: 767px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .text-content .sample-itineraries-description {
+    margin-right: 0;
+    font-size: 16px;
+    width: auto;
+  }
+}
+@media (max-width: 1440px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .map-placeholder {
+    width: 299px;
+  }
+}
+@media (max-width: 992px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .map-placeholder {
+    width: 217px;
+    padding-top: 59px;
+  }
+}
+@media (max-width: 767px) {
+  section.sample-itineraries .container .container-wrapper .row .col-xxl-12 .sample-itineraries-content .inner-wrapper .map-placeholder {
+    padding-top: 24px;
+    display: block;
+    margin: auto;
+  }
+}
+section.sample-itineraries .container .container-wrapper .row .more-itineraries {
   background: #000000;
   color: #FFFFFF;
   font-weight: 500;
@@ -17436,12 +17750,26 @@ section.sample-itineraries .container-wrapper .row .more-itineraries {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 1440px) {
+  section.sample-itineraries .container .container-wrapper .row .more-itineraries {
+    margin-top: 6px;
+    font-size: 14px;
+    width: 217px;
+    height: 54px;
+  }
+}
+@media (max-width: 890px) {
+  section.sample-itineraries .container .container-wrapper .row .more-itineraries {
+    display: none;
+  }
+}
 
 section.frequently-asked-questions .container-wrapper {
-  padding: 0 45px;
+  padding: 0 169px;
 }
 section.frequently-asked-questions .container-wrapper .row .col-xxl-12 {
   margin-top: 117px;
+  margin-bottom: 28px;
 }
 section.frequently-asked-questions .container-wrapper .row .col-xxl-12 .accordion {
   font-style: normal;
@@ -17459,15 +17787,16 @@ section.frequently-asked-questions .container-wrapper .row .col-xxl-12 .accordio
   outline: none;
   transition: 0.4s;
 }
-section.frequently-asked-questions .container-wrapper .row .col-xxl-12 .accordion:after {
-  content: "+";
+section.frequently-asked-questions .container-wrapper .row .col-xxl-12 .accordion:before {
+  content: url("http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/plus-sign.png");
   color: #777;
   font-weight: bold;
   float: right;
   margin-left: 5px;
 }
-section.frequently-asked-questions .container-wrapper .row .col-xxl-12 .active:after {
-  content: "−";
+section.frequently-asked-questions .container-wrapper .row .col-xxl-12 .active:before {
+  content: url("http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/minus-sign.png");
+  margin-right: -13px;
 }
 section.frequently-asked-questions .container-wrapper .row .col-xxl-12 .accordion-content {
   background-color: white;
@@ -17488,6 +17817,70 @@ section.frequently-asked-questions .container-wrapper .row .col-xxl-12 .accordio
   color: #13272C;
   opacity: 0.7;
   padding-bottom: 12px;
+  list-style-type: none;
+}
+section.frequently-asked-questions .container-wrapper .row .col-xxl-12 .accordion-content .information-wrapper li:before {
+  content: url("http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/check-circle.png");
+  margin-right: 16px;
+  display: inline-flex;
+  vertical-align: middle;
+}
+section.frequently-asked-questions .container-wrapper .row .col-xxl-12 .accordion-content .information-wrapper li:last-child {
+  padding-bottom: 0;
+}
+
+section.contact-us {
+  margin-bottom: 29px;
+}
+section.contact-us .container-wrapper {
+  padding: 0 45px;
+  margin-top: 107px;
+}
+section.contact-us .container-wrapper .row {
+  gap: 106px;
+  margin-left: 0;
+}
+section.contact-us .container-wrapper .row .col {
+  padding: 0;
+}
+section.contact-us .container-wrapper .row .col .form_heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: #203940;
+  margin-bottom: 25px;
+}
+section.contact-us .container-wrapper .row .col .contact_details_heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 140%;
+  letter-spacing: -0.02em;
+  color: #203940;
+  margin-bottom: 25px;
+}
+section.contact-us .container-wrapper .row .col .contact-details-wrapper {
+  display: flex;
+}
+section.contact-us .container-wrapper .row .col .contact-details-wrapper .contact-details-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 170%;
+  color: #13272C;
+  opacity: 0.7;
+  flex: 0 0 204px;
+  margin-right: 46px;
+  margin-bottom: 32px;
+}
+section.contact-us .container-wrapper .row .col .contact-details-wrapper .contact-details-information {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 170%;
+  color: #203940;
 }
 
 /*# sourceMappingURL=theme.css.map */

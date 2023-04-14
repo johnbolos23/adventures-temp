@@ -76,6 +76,7 @@ section.single-region-about {
 }
 
 section.single-region-summary {
+    margin-bottom: 50px;
     .col-xxl-3 {
         margin-top: 87px;
         padding-left: 0px;
@@ -104,7 +105,7 @@ section.single-region-summary {
             opacity: 0.7;
             margin-bottom: 24px;
         }
-        .test {
+        .summary-wrapper {
             display: flex;
             p.summary_labels {
                 flex: 0 0 204px;
