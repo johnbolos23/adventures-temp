@@ -1,6 +1,9 @@
 section.sample-itineraries {
-    padding-bottom: 39px;
-    @media (max-width: 992px) {
+    padding-bottom: 89px;
+    @media (max-width: 1280px) {
+        padding-bottom: 50px;
+    }
+    @media (max-width: 890px) {
         padding-bottom: 30px;
     }
     @media (max-width: 767px) {
