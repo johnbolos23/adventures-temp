@@ -12,18 +12,33 @@
                 </div>
                 <div class="col">
                     <h3 class="contact_details_heading"><?= get_sub_field('contact_details_heading'); ?></h3>
-                        <?php if( get_sub_field('contact_details') ) : ?>
-                            <?php foreach( get_sub_field('contact_details') as $item ) : ?>
-                                <div class="contact-details-wrapper">
-                                    <p class="contact-details-label"><?php echo $item['contact_details_label']; ?></p>
-                                    <p class="contact-details-information"><?php echo $item['contact_details_information']; ?></p>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    <div class="social-icons">
-                        <?= get_sub_field('instagram'); ?>        
+                    <div class="contact-details-wrapper">
+                        <h6>Email Address</h6>
+                            <span><?= get_sub_field('email_address'); ?></span>
+                        <h6>Follow Us</h6>
+                            <span>
+                                <?php if( get_sub_field('instagram') ) : ?>
+                                    <a href="<?= get_sub_field('instagram'); ?>"><?= get_template_part('inc/svg/instagram'); ?></a>
+                                <?php endif; ?>
+                                <?php if( get_sub_field('facebook') ) : ?>
+                                    <a href="<?= get_sub_field('facebook'); ?>"><?= get_template_part('inc/svg/facebook'); ?></a>
+                                <?php endif; ?>
+                                <?php if( get_sub_field('linkedin') ) : ?>
+                                    <a href="<?= get_sub_field('linkedin'); ?>"><?= get_template_part('inc/svg/linkedin'); ?></a>
+                                <?php endif; ?>
+                                <?php if( get_sub_field('twitter') ) : ?>
+                                    <a href="<?= get_sub_field('twitter'); ?>"><?= get_template_part('inc/svg/twitter'); ?></a>
+                                <?php endif; ?>
+                                <?php if( get_sub_field('pinterest') ) : ?>
+                                    <a href="<?= get_sub_field('pinterest'); ?>"><?= get_template_part('inc/svg/pinterest'); ?></a>
+                                <?php endif; ?>
+                                <?php if( get_sub_field('youtube') ) : ?>
+                                    <a href="<?= get_sub_field('youtube'); ?>"><?= get_template_part('inc/svg/youtube'); ?></a>
+                                <?php endif; ?>
+                            </span>
+                        <h6>Write Us</h6>
+                            <span><?= get_sub_field('po_box_address'); ?></span>
                     </div>
-                    
                 </div>
             </div>
         </div>

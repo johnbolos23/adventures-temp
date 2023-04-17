@@ -1,50 +1,116 @@
 section.contact-us {
-    margin-bottom: 29px;
+    margin-bottom: 37px;
+    @media (max-width: 1280px) {
+        margin-bottom: 7px;
+    }
+    @media (max-width: 1200px) {
+        margin-bottom: 0;
+    }
+    @media (max-width: 767px) {
+        margin-bottom: 10px;
+    }
     .container-wrapper {
-        padding: 0 45px;
+        // padding: 0 45px;
         margin-top: 107px;
+        @media (max-width: 1280px) {
+            margin-top: 85px;
+        }
+        @media (max-width: 1200px) {
+            margin-top: 90px;
+        }
+        @media (max-width: 767px) {
+            margin-top: 64px;
+        }
         .row {
             gap: 106px;
             margin-left: 0;
+            @media (max-width: 1480px) {
+                gap: 41px;
+            }
+            @media (max-width: 1200px) {
+                margin-right: 0;
+                gap: 90px;
+            }
+            @media (max-width: 767px) {
+                gap: 56px;
+            }
             .col {
                 padding: 0;
-                .form_heading {
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 42px;
-                    line-height: 140%;
-                    letter-spacing: -0.02em;
-                    color: #203940;
-                    margin-bottom: 25px;
+                @media (max-width: 1200px) {
+                    flex: auto;
                 }
-                .contact_details_heading {
+                h3 {
                     font-style: normal;
                     font-weight: 500;
                     font-size: 42px;
                     line-height: 140%;
                     letter-spacing: -0.02em;
-                    color: #203940;
+                    color: #13272C;
                     margin-bottom: 25px;
+                    @media (max-width: 1280px) {
+                        font-size: 36px;
+                        line-height: 120%;
+                        margin-bottom: 32px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 28px;
+                        margin-bottom: 24px;
+                    }
+                }
+                .contact-details-form-wrapper {
+                    .gform_wrapper {
+                        .gform_fields {
+                            fieldset {
+                                .ginput_container_address {
+                                    flex-direction: row-reverse;
+                                }     
+                            }
+                        }   
+                    }     
                 }
                 .contact-details-wrapper {
-                    display: flex;
-                    .contact-details-label {
+                    display: grid;
+                    grid-template-columns: 204px 1fr;
+                    @media (max-width: 767px) {
+                        display: block;
+                    }
+                    h6 {
                         font-style: normal;
                         font-weight: 400;
                         font-size: 24px;
                         line-height: 170%;
                         color: #13272C;
                         opacity: 0.7;
-                        flex: 0 0 204px;
-                        margin-right: 46px;
-                        margin-bottom: 32px;
-                    }
-                    .contact-details-information {
-                        font-style: normal;
+                        margin-bottom: 36px;
+                        @media (max-width: 1280px) {
+                            font-size: 20px;
+                            margin-bottom: 32px;
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 18px;
+                            margin-top: 32px;
+                            margin-bottom: 0;
+                        }
+                        &:first-child {
+                            @media (max-width: 767px) {
+                                margin: 0 !important;
+                            }
+                        }
+                    }  
+                    span {
                         font-weight: 500;
                         font-size: 24px;
                         line-height: 170%;
+                        font-weight: 500;
                         color: #203940;
+                        width: 490px;
+                        @media (max-width: 1280px) {
+                            font-size: 20px;
+                        }
+                        a {
+                            text-decoration: none;
+                            padding-right: 18px;
+                        }
                     }
                 }
             }
