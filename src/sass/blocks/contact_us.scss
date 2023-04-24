@@ -1,10 +1,10 @@
 section.contact-us {
-    margin-bottom: 37px;
+    margin-bottom: 29px;
     @media (max-width: 1280px) {
         margin-bottom: 7px;
     }
     @media (max-width: 1200px) {
-        margin-bottom: 0;
+        margin-bottom: 30px;
     }
     @media (max-width: 767px) {
         margin-bottom: 10px;
@@ -26,19 +26,22 @@ section.contact-us {
             margin-left: 0;
             @media (max-width: 1480px) {
                 gap: 41px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width: 1280px) {
+                grid-template-columns: 580px 1fr;
             }
             @media (max-width: 1200px) {
                 margin-right: 0;
-                gap: 90px;
+                gap: 82px;
+                grid-template-columns: 1fr;
             }
             @media (max-width: 767px) {
                 gap: 56px;
             }
             .col {
                 padding: 0;
-                @media (max-width: 1200px) {
-                    flex: auto;
-                }
                 h3 {
                     font-style: normal;
                     font-weight: 500;
@@ -64,6 +67,16 @@ section.contact-us {
                                 .ginput_container_address {
                                     flex-direction: row-reverse;
                                 }     
+                            }
+                            .populate-region {
+                                .ginput_container {
+                                    select {
+                                        background-position-x: 98% !important;
+                                        @media (max-width: 767px) {
+                                            background-position-x: 96% !important;
+                                        }
+                                    }
+                                }
                             }
                         }   
                     }     
@@ -93,7 +106,15 @@ section.contact-us {
                         }
                         &:first-child {
                             @media (max-width: 767px) {
-                                margin: 0 !important;
+                                margin: 0;
+                            }
+                        }
+                        &:last-of-type {
+                            @media (max-width: 1200px) {
+                                margin: 0;
+                            }
+                            @media (max-width: 767px) {
+                                margin-top: 32px;
                             }
                         }
                     }  
@@ -106,6 +127,16 @@ section.contact-us {
                         width: 490px;
                         @media (max-width: 1280px) {
                             font-size: 20px;
+                            width: 376px;
+                        }
+                        @media (max-width: 1200px) {
+                            width: auto;
+                        }
+                        @media (max-width: 767px) {
+                            font-size: 20px;
+                            display: inline-block;
+                            width: auto;
+                            word-break: break-word;
                         }
                         a {
                             text-decoration: none;

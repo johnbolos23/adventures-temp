@@ -41,14 +41,14 @@ $navbar_type       = get_theme_mod('understrap_navbar_type', 'collapse');
 		<header class="main-header" id="main-header">
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="col-auto">
+					<div class="col-xxl-2 col-xl-2 col-md-5 left">
 						<div class="col-wrapper">
 							<a href="<?= site_url(); ?>">
 								<img src="<?= get_field('logo','option'); ?>" alt="Site Logo" />
 							</a>
 						</div>
 					</div>
-					<div class="col-6 col-lg-6">
+					<div class="col-xxl-6 col-xl-6 col-md-6 middle">
 						<div class="col-wrapper header-search">
 							<form action="/" id="header-search">
 								<div class="search-input">
@@ -58,10 +58,10 @@ $navbar_type       = get_theme_mod('understrap_navbar_type', 'collapse');
 							</form>
 						</div>
 					</div>
-					<div class="col-one">
+					<div class="col-xxl-4 col-xl-4 col-md-1 right">
 						<div class="col-wrapper header-email-hamburger-wrapper">
 							<div class="row align-items-center">
-								<div class="col-one">
+								<div class="col">
 									<div class="header-email">
 										<span><?= get_template_part('inc/svg/email'); ?></span>
 										<div class="header-email-details">

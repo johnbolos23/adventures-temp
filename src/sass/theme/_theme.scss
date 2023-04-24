@@ -62,7 +62,7 @@ body {
         &.logged-in {
             header#main-header {
                 top: 32px;
-                display: none;
+                // display: none;
             }
         }
     }
@@ -86,15 +86,38 @@ header#main-header {
     background: #FFFFFF;
     border-bottom: 1.5px solid #F0F1F2;
     padding: 14px 0;
-
+    // .row-wrapper {
+    //     --bs-gutter-x: unset;
+    // }
+    .left {
+        padding: 0;
+    }
+    .middle {
+        padding: 0;
+    }
+    .right {
+        padding-right: 0;
+        .header-email-hamburger-wrapper {
+            .col {
+                padding: 0;
+                @media (max-width: 1200px) {
+                    display: none;
+                }
+            }
+            .col-auto {
+                padding: 0;
+            }
+        }
+    }
     .header-search {
-        padding-right: 60px;
-        padding-left: 15px;
-
+        margin-right: 71px;
+        margin-left: 35px;
+        @media (max-width: 1399px) {
+            margin-right: 32px;
+        }
         form#header-search {
             .search-input {
                 position: relative;
-
                 input {
                     background: #F0F1F2;
                     width: 100%;
@@ -107,12 +130,10 @@ header#main-header {
                     letter-spacing: -0.02em;
                     color: #203940;
                     outline: 0;
-
                     &::placeholder {
                         opacity: .4;
                     }
                 }
-
                 button {
                     position: absolute;
                     top: 50%;
@@ -127,11 +148,10 @@ header#main-header {
             }
         }
     }
-
     .header-email {
         display: flex;
         align-items: center;
-
+        padding-right: 54px;
         >span {
             background: rgba(66, 186, 125, 0.1);
             border-radius: 40px;
@@ -142,19 +162,26 @@ header#main-header {
             text-align: center;
             flex: 0 0 58px;
             margin-right: 16px;
+            @media (max-width: 1399px) {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                flex: 0 0 50px;
+            }
         }
-
         .header-email-details {
             span {
-                font-style: normal;
+                font-style: italic;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 100%;
                 letter-spacing: -0.02em;
                 color: #203940;
                 opacity: 0.77;
+                @media (max-width: 1440px) {
+                    font-size: 12px; 
+                }
             }
-
             a {
                 letter-spacing: -0.02em;
                 color: #203940;
@@ -162,18 +189,24 @@ header#main-header {
                 font-size: 16px;
                 text-decoration: none;
                 line-height: 100%;
-
+                @media (max-width: 1440px) {
+                    font-size: 14px; 
+                }
                 i {
                     color: #EBA927;
                 }
             }
         }
     }
-
     #hamburger-button {
         background: transparent;
         border: none;
         padding: 0;
+        svg {
+            @media (max-width: 1399px) {
+                width: 28px;
+            }
+        }
     }
 }
 

@@ -64,6 +64,11 @@
             select{
                 padding: 10px 20px 0!important;
                 font-size: 18px;
+                appearance: none;
+                background-image: url('http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/Vector-142.png');
+                background-repeat: no-repeat;
+                background-position: right;
+                background-position-x: 96%;
                 @media (max-width: 1280px) {
                     font-size: 16px;
                 }
