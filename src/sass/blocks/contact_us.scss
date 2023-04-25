@@ -9,14 +9,22 @@ section.contact-us {
     @media (max-width: 767px) {
         margin-bottom: 10px;
     }
+    .container {
+        @media (max-width: 1399px) {
+            padding: 0px;
+        }
+    }
     .container-wrapper {
-        // padding: 0 45px;
+        padding: 0 45px;
         margin-top: 107px;
-        @media (max-width: 1280px) {
+        @media (max-width: 1399px) {
             margin-top: 85px;
+            padding: 0 40px;
         }
         @media (max-width: 1200px) {
             margin-top: 90px;
+            margin-left: 61px;
+            margin-right: 61px;
         }
         @media (max-width: 767px) {
             margin-top: 64px;

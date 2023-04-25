@@ -43,7 +43,7 @@ $columnsArray = array( $columnOne, $columnTwo, $columnThree, $columnFour );
 			<?php if( get_field('facebook','option') || get_field('instagram','option') || get_field('youtube','option') || get_field('linkedin','option') || get_field('twitter','option') || get_field('pinterest','option') ) : ?>
 				<div class="main-footer-social-medias">
 					<h4>Follow Us</h4>
-					<div class="d-flex">
+					<div class="d-flex icons">
 						<?php if( get_field('instagram','option') ) : ?>
 						<div class="social-media-column">
 							<a href="<?= get_field('instagram','option'); ?>"><?php get_template_part('inc/svg/instagram'); ?></a>
@@ -81,17 +81,18 @@ $columnsArray = array( $columnOne, $columnTwo, $columnThree, $columnFour );
 						<?php endif; ?>
 					</div>
 
-					<img src="<?php echo get_field('footer_logo','option') ? get_field('footer_logo','option') : get_field('logo','option'); ?>" alt="Footer Logo" />
+					<img src="<?php echo get_field('footer_logo','option') ? get_field('footer_logo','option') : get_field('logo','option'); ?>" alt="Footer Logo" class="for-desktop" />
 				</div>
+				<img src="<?php echo get_field('footer_logo','option') ? get_field('footer_logo','option') : get_field('logo','option'); ?>" alt="Footer Logo" class="for-tablet" />
 			<?php endif; ?>
 			</div>
 		</div>
 		<div class="footer-bottom-content">
 			<div class="row">
-				<div class="col-12 col-lg-6">
+				<div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
 					<p>Copyright © <?= date('Y'); ?> <?= get_field('copyright','option'); ?></p>
 				</div>
-				<div class="col-12 col-lg-6 text-right">
+				<div class="col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 text-right">
 					<p><?= get_field('site_creator','option'); ?></p>
 				</div>
 			</div>
