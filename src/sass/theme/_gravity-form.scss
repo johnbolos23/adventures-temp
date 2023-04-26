@@ -21,7 +21,9 @@
                 height: 60px;
                 padding: 10px 24px 0 !important;
                 font-size: 18px;
-
+                @media (max-width: 1280px) {
+                    font-size: 16px;
+                }
                 &::placeholder{
                     opacity: 0;
                     display: none;
@@ -43,6 +45,10 @@
                 margin: 0;
                 transition: all 0.3s ease;
                 padding: 0;
+                color: #203940;
+                @media (max-width: 1280px) {
+                    font-size: 16px;
+                }
             }
 
             textarea{
@@ -58,7 +64,14 @@
             select{
                 padding: 10px 20px 0!important;
                 font-size: 18px;
-
+                appearance: none;
+                background-image: url('http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/Vector-142.png');
+                background-repeat: no-repeat;
+                background-position: right;
+                background-position-x: 96%;
+                @media (max-width: 1280px) {
+                    font-size: 16px;
+                }
                 + label {
                     position: absolute;
                     top: 12px;
@@ -66,6 +79,9 @@
                     font-size: 12px;
                     transform: translateY(0);
                     padding: 0;
+                    @media (max-width: 1280px) {
+                        font-size: 10px;
+                    }
                 }
             }
 
@@ -129,11 +145,19 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
             font-size: 16px;
+            font-weight: 500;
             padding: 22px;
             text-align: center;
             border: none;
             min-width: 137px;
             line-height: 1;
+            @media (max-width: 1280px) {
+                font-size: 14px;
+                min-width: 129px;
+            }
+            @media (max-width: 767px) {
+                width: 100%;
+            }
         }
     }
 }
