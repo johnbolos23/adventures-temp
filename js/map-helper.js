@@ -85,7 +85,7 @@
 
                 google.maps.event.trigger(marker,'click');
             }else{
-                google.maps.event.addListener(marker, 'click', function() {
+                google.maps.event.addListener(marker, 'mouseover', function() {
                     if( previousWindow ){
                         previousWindow.close();
                     }
