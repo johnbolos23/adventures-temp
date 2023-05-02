@@ -1,10 +1,31 @@
 section.frequently-asked-questions {
     .container-wrapper {
-        padding: 0 169px;
+        padding: 0 255px;
+        @media (max-width: 1399px) {
+            padding: 0 138px;
+        }
+        @media (max-width: 1200px) {
+            padding: 0 28px;
+        }
+        @media (max-width: 767px) {
+            padding: 0 0px;
+        }
         .row {
             .col-xxl-12 {
                 margin-top: 117px;
                 margin-bottom: 28px;
+                @media (max-width: 1399px) {
+                    margin-top: 98px;
+                    margin-bottom: 0;
+                }
+                @media (max-width: 1200px) {
+                    margin-top: 80px;
+                    margin-bottom: 25px;
+                }
+                @media (max-width: 767px) {
+                    margin-top: 60px;
+                    margin-bottom: 0;
+                }
                 .accordion {
                     font-style: normal;
                     font-weight: 500;
@@ -20,18 +41,42 @@ section.frequently-asked-questions {
                     text-align: left;
                     outline: none;
                     transition: 0.4s;
+                    margin-bottom: 9px;
+                    padding: 0;
+                    @media (max-width: 1399px) {
+                        font-size: 24px;
+                        margin-bottom: 3px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 20px;
+                        margin-bottom: 0;
+                    }
                     &:before {
                         content: url("http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/plus-sign.png");
                         color: #777;
                         font-weight: bold;
                         float: right;
                         margin-left: 5px;
+                        @media (max-width: 767px) {
+                            transform: scale(.7);
+                        }
                     }
                 }
                 .active {
+                    margin-bottom: 0px;
                     &:before {
                         content: url("http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/minus-sign.png");
                         margin-right: -13px;
+                        @media (max-width: 1399px) {
+                            width: 36px;
+                            height: 36px;
+                            margin-right: -5px;
+                        }
+                        @media (max-width: 767px) {
+                            transform: scale(83.4%);
+                            display: inline-flex;
+                            align-items: flex-end;
+                        }
                     }
                 }
                 .accordion-content {
@@ -40,6 +85,14 @@ section.frequently-asked-questions {
                     overflow: hidden;
                     transition: max-height 0.2s ease-out;
                     margin-bottom: 36px;
+                    margin-left: 5px;
+                    @media (max-width: 1399px) {
+                        margin-bottom: 38px;
+                    }
+                    @media (max-width: 767px) {
+                        margin-bottom: 36px;
+                        margin-left: 0;
+                    }
                     .information-wrapper {
                         margin-top: 30px;
                         li {
@@ -52,15 +105,37 @@ section.frequently-asked-questions {
                             opacity: 0.7;
                             padding-bottom: 12px;
                             list-style-type: none;
+                            @media (max-width: 1399px) {
+                                font-size: 16px;
+                            }
+                            @media (max-width: 767) {
+                                font-size: 14px;
+                            }
                             &:before {
                                 content: url("http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/check-circle.png");
                                 margin-right: 16px;
-                                    display: inline-flex;
-                                    vertical-align: middle;
+                                display: inline-flex;
+                                vertical-align: middle;
+                                @media (max-width: 1399px) {
+                                    width: 20px;
+                                    height: 20px;
+                                    align-items: center;
+                                }
+                                @media (max-width: 1399px) {
+                                    transform: scale(.8);
+                                }
+                                @media (max-width: 767px) {
+                                    margin-right: 8px;
+                                }
                             }
                             &:last-child {
                                 padding-bottom: 0;
                             }
+                        }
+                    }
+                    &:last-child {
+                        @media (max-width: 767px) {
+                            margin-bottom: 25px;
                         }
                     }
                 }

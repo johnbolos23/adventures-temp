@@ -51,7 +51,7 @@ $navbar_type       = get_theme_mod('understrap_navbar_type', 'collapse');
 						</div>
 						<div class="col-xxl-6 col-xl-5 col-lg-7 col-md-6 col-2 middle">
 							<div class="col-wrapper header-search">
-								<form action="/" id="header-search">
+								<form action="<?php echo site_url(); ?>" id="header-search">
 									<div class="search-input">
 										<input type="text" name="s" placeholder="Search..." />
 										<button type="submit"><?= get_template_part('inc/svg/search'); ?></button>
