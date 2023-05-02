@@ -58,19 +58,25 @@ body {
 #adventure-distinction {
     body {
         margin-top: 91px;
+        @media (max-width: 1200px) {
+            margin-top: 95px;
+        }
         @media (max-width: 767px) {
-            top: 69px;
+            margin-top: 69px;
         }
         &.logged-in {
             header#main-header {
                 top: 32px;
                 // display: none;
                 @media (max-width: 1200px) {
+                    top: 33px;
+                }
+                @media (max-width: 767px) {
                     top: 46px;
                 }
             }
         }
-    }
+    }   
 }
 
 .heading {
