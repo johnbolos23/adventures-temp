@@ -6,7 +6,7 @@
                     <img src="<?= get_sub_field('image'); ?>" />
                 </div>
                 <div class="col-xxl-7 col-xl-7">
-                    <h3><?php echo get_sub_field('heading'); ?></h3>
+                    <?php echo get_sub_field('heading'); ?>
                     <?php echo get_sub_field('description'); ?>
                 </div>
             </div>
