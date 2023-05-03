@@ -22,7 +22,7 @@ $query = new WP_Query( $args );
                 <button type="submit"><?= get_template_part('inc/svg/search'); ?></button>
             </div>
         </form>
-        <p><?php echo $query->found_posts; ?> Search Results for "<?php echo $_GET['s']; ?></p>
+        <p><?php echo $query->found_posts; ?> Search Results for "<?php echo $_GET['s']; ?>"</p>
     </div>
 </div>
 

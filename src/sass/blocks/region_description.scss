@@ -1,0 +1,41 @@
+section.region-description {
+    background-color: #203940;
+    padding: 123px 0 142px;
+    .container {
+        max-width: 955px;
+        .wysiwyg-content {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 140%;
+            text-align: center;
+            letter-spacing: -0.02em;
+            color: #FFFFFF;
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+body {
+    &.page-id-489 {
+        section.image-with-text {
+            margin-bottom: 101px;
+            .container-wrapper {
+                padding: 0px 88px;
+                margin-top: 114px;
+                .row {
+                    margin-top: 0px;
+                    .col-xxl-5 {
+                        width: 37.1%;
+                    }
+                    .col-xxl-7 {
+                        padding-left: 116px;
+                        margin: 0;
+                        width: 62.9%;
+                    }
+                }
+            }
+        }
+    }
+}
