@@ -27,6 +27,8 @@ section.region-post-slider {
             .slick-track {
                 display: flex;
                 gap: 24px;
+                transform: translate3d(-1552px, 0px, 0px) !important;
+                margin-bottom: 50px;
                 .post-item-slider-wrapper {
                     position: relative;
                     width: auto !important;
@@ -40,7 +42,7 @@ section.region-post-slider {
                         letter-spacing: -0.02em;
                         color: #203940;
                         margin: 32px 0 12px;
-                        // width: 486px;
+                        width: 486px;
                     }
                     p {
                         // font-family: 'Cera Pro';
@@ -48,7 +50,6 @@ section.region-post-slider {
                         line-height: 170%;
                         color: #13272C;
                         opacity: 0.7;
-                        max-width: 486px;
                         margin: 0;
                     }
                     .number-of-days {
@@ -82,7 +83,7 @@ section.region-post-slider {
                 .slick-prev {
                     z-index: 1;
                     left: -35px;
-                    top: 310px;
+                    top: 300px;
                     &::before {
                         display: none;
                     }
@@ -90,13 +91,14 @@ section.region-post-slider {
                 .slick-next {
                     z-index: 1;
                     right: 5px;
-                    top: 310px;
+                    top: 300px;
                     &::before {
                         display: none;
                     }
                 }
                 .slick-dots {
                     display: flex;
+                    bottom: 0;
                     li {
                         background: #EBF0F1;
                         overflow: hidden;

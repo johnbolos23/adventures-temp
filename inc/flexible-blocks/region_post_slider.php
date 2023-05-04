@@ -1,8 +1,15 @@
-<section class="page-section region-post-slider" id="region-post-slider-<?= get_row_index(); ?>">
+<section class="page-section region-post-slider <?php echo get_sub_field('custom_css'); ?>" id="region-post-slider-<?= get_row_index(); ?>">
+<?php 
+    if( get_sub_field('css_code') ){
+        $customCSS = str_replace('{{section_id}}', '#adventure-distinction #region-post-slider-'. get_row_index(), get_sub_field('css_code'));
+
+        echo '<style>'. $customCSS . '</style>';
+    }
+?>
     <div class="container">
         <div class="container-wrapper">
             <div class="heading-wrapper d-flex">
-                <h3 class="heading"><?php echo get_sub_field('heading'); ?></h3>
+                <h3 class="heading"><?= get_term( get_sub_field('heading')  )->name;?></h3>
                 <div class="btn view-all">View All</div>
             </div>
             <?php if( get_sub_field('custom_items') ) : ?>
