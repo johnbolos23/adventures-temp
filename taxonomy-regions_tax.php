@@ -3,7 +3,17 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
+
+if( get_field('use_this_page_content', 'term_'. get_queried_object()->term_id) ){
+    while( have_rows('flexible_blocks', get_field('use_this_page_content', 'term_'. get_queried_object()->term_id) ) ) : the_row();
+
+        get_template_part( 'inc/flexible-blocks/' . get_row_layout() );
+
+    endwhile;
+}else{
+
 ?>
+
 
 <section class="breadcrumbs-section">
     <div class="container">
@@ -129,4 +139,9 @@ get_header();
 
 
 
-<?php get_footer(); ?>
+<?php 
+}
+
+get_footer(); 
+
+?>
