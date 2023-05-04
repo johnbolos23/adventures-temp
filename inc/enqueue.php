@@ -58,7 +58,7 @@ if (!function_exists('understrap_scripts')) {
 		wp_enqueue_script( 'flickity-script', '//cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js', array('jquery'), true, true);	
 		wp_enqueue_style( 'flickity-style', '//cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.css' );
 
-		wp_enqueue_script( 'googlemapapi', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAEPh1fe1kgVloGScUKPpxhlyzG1j5gsX8&libraries=places&callback=Function.prototype', array('jquery'), true, true);  
+		wp_enqueue_script( 'googlemapapi', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCApwB8Swt_t4MlQN8qnvKMVl5cawtl6Og&libraries=places&callback=Function.prototype', array('jquery'), true, true);  
 
 		wp_enqueue_script( 'map-helper', get_stylesheet_directory_uri() . '/js/map-helper.js', array('jquery'), true, true);  
 
