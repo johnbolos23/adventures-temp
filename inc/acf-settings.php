@@ -1428,7 +1428,7 @@ if( function_exists('acf_add_local_field_group') ):
     
     acf_add_local_field_group(array(
         'key' => 'group_63e22cde5a6cb',
-        'title' => 'Region Image',
+        'title' => 'Region Type Details',
         'fields' => array(
             array(
                 'key' => 'field_63e22cead4aef',
@@ -1453,6 +1453,28 @@ if( function_exists('acf_add_local_field_group') ):
                 'max_height' => '',
                 'max_size' => '',
                 'mime_types' => '',
+            ),
+            array(
+                'key' => 'field_64533d0e0e574',
+                'label' => 'Use this page content',
+                'name' => 'use_this_page_content',
+                'type' => 'post_object',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'post_type' => array(
+                    0 => 'page',
+                ),
+                'taxonomy' => '',
+                'allow_null' => 0,
+                'multiple' => 0,
+                'return_format' => 'id',
+                'ui' => 1,
             ),
         ),
         'location' => array(
