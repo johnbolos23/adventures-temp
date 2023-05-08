@@ -3,7 +3,8 @@
         <div class="container-wrapper">
             <div class="row <?php echo get_sub_field('position') == 'right' ? 'flex-row-reverse' : ''; ?>">
                 <div class="col-xxl-5 col-xl-5">
-                    <img src="<?= get_sub_field('image'); ?>" />
+                    <img src="<?= get_sub_field('image'); ?>" class="for-desktop"/>
+                    <img src="<?= get_sub_field('tablet_image'); ?>" class="for-tablet"/>
                 </div>
                 <div class="col-xxl-7 col-xl-7">
                     <?php echo get_sub_field('heading'); ?>
