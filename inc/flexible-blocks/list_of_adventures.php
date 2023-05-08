@@ -6,7 +6,7 @@
             <div class="row">
                 <?php if( get_sub_field('custom_items') ) : ?>
                     <?php foreach( get_sub_field('custom_items') as $item ) : ?>
-                        <div class="col-xxl-4">
+                        <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 col-6">
                             <div class="item-wrapper d-flex">
                                 <div class="icon">
                                     <?php echo $item['icon']; ?>

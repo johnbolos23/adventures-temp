@@ -1,8 +1,18 @@
 section.region-description {
     background-color: #203940;
     padding: 123px 0 142px;
+    @media (max-width: 1399px) {
+        padding: 90px 290px 108px;
+    }
+    @media (max-width: 1200px) {
+        padding: 90px 40px 108px;
+    }
+    @media (max-width: 767px) {
+        padding: 66px 40px;
+    }
     .container {
         max-width: 955px;
+        padding: 0;
         .wysiwyg-content {
             font-weight: 400;
             font-size: 32px;
@@ -10,6 +20,12 @@ section.region-description {
             text-align: center;
             letter-spacing: -0.02em;
             color: #FFFFFF;
+            @media (max-width: 1399px) {
+                font-size: 24px;
+            }
+            @media (max-width: 767px) {
+                font-size: 20px;
+            }
             p {
                 margin-bottom: 0;
             }

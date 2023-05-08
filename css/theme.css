@@ -13057,31 +13057,78 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 section.region-header {
-  min-height: 400px;
   display: flex;
-  align-items: flex-end;
-  padding-bottom: 84px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: center;
 }
-section.region-header:before {
-  content: "";
+@media (max-width: 1399px) {
+  section.region-header .for-desktop {
+    display: none;
+  }
+}
+section.region-header .for-laptop {
+  display: none;
+}
+@media (max-width: 1399px) {
+  section.region-header .for-laptop {
+    display: block;
+    width: -webkit-fill-available;
+  }
+}
+@media (max-width: 1200px) {
+  section.region-header .for-laptop {
+    display: none;
+  }
+}
+section.region-header .for-tablet {
+  display: none;
+}
+@media (max-width: 1200px) {
+  section.region-header .for-tablet {
+    display: block;
+    width: -webkit-fill-available;
+  }
+}
+@media (max-width: 540px) {
+  section.region-header .for-tablet {
+    display: none;
+  }
+}
+@media (max-width: 9999px) {
+  section.region-header .for-mobile {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  section.region-header .for-mobile {
+    display: block;
+    width: -webkit-fill-available;
+  }
+}
+section.region-header .text-wrapper {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 131.73%);
-  opacity: 0.4;
-  transform: matrix(1, 0, 0, -1, 0, 0);
+  bottom: 84px;
 }
-section.region-header .heading {
-  font-weight: 500;
+@media (max-width: 1399px) {
+  section.region-header .text-wrapper {
+    bottom: 54px;
+  }
+}
+section.region-header .text-wrapper .heading {
   font-size: 60px;
   line-height: 110%;
-  letter-spacing: -0.02em;
   color: #FFFFFF;
+  margin: 0;
+}
+@media (max-width: 1399px) {
+  section.region-header .text-wrapper .heading {
+    font-size: 48px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 767px) {
+  section.region-header .text-wrapper .heading {
+    font-size: 32px;
+  }
 }
 
 section.region-description {
@@ -17716,22 +17763,97 @@ section.featured_post .container-wrapper .post-item:nth-child(4) .post-read-more
 }
 
 section.image-with-text .container-wrapper {
-  padding: 0 60px;
+  padding: 117px 88px 0;
+}
+@media (max-width: 1600px) {
+  section.image-with-text .container-wrapper {
+    padding: 94px 38px 0;
+  }
+}
+@media (max-width: 1279px) {
+  section.image-with-text .container-wrapper {
+    padding: 90px 28px 0px;
+  }
+}
+@media (max-width: 767px) {
+  section.image-with-text .container-wrapper {
+    padding: 71px 0 0;
+  }
 }
 section.image-with-text .container-wrapper .row {
-  margin-top: 117px;
+  margin: 0;
+}
+@media (max-width: 1279px) {
+  section.image-with-text .container-wrapper .row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 section.image-with-text .container-wrapper .row .col-xxl-5 {
   padding-left: initial;
   padding-right: initial;
+  width: 37%;
 }
-section.image-with-text .container-wrapper .row .col-xxl-5 img {
+@media (max-width: 1399px) {
+  section.image-with-text .container-wrapper .row .col-xxl-5 {
+    width: auto;
+  }
+}
+@media (max-width: 1279px) {
+  section.image-with-text .container-wrapper .row .col-xxl-5 {
+    width: -webkit-fill-available;
+  }
+}
+section.image-with-text .container-wrapper .row .col-xxl-5 .for-desktop {
   height: 527px;
 }
+@media (max-width: 1399px) {
+  section.image-with-text .container-wrapper .row .col-xxl-5 .for-desktop {
+    max-width: 528px;
+    height: 492px;
+  }
+}
+@media (max-width: 1279px) {
+  section.image-with-text .container-wrapper .row .col-xxl-5 .for-desktop {
+    display: none;
+  }
+}
+section.image-with-text .container-wrapper .row .col-xxl-5 .for-tablet {
+  display: none;
+}
+@media (max-width: 1279px) {
+  section.image-with-text .container-wrapper .row .col-xxl-5 .for-tablet {
+    display: block;
+    min-width: 100%;
+  }
+}
 section.image-with-text .container-wrapper .row .col-xxl-7 {
-  padding-left: 49px;
-  padding-right: initial;
-  margin: auto;
+  padding-left: 116px;
+  padding-right: 0;
+  margin: 0;
+}
+@media (max-width: 1600px) {
+  section.image-with-text .container-wrapper .row .col-xxl-7 {
+    width: 63%;
+  }
+}
+@media (max-width: 1399px) {
+  section.image-with-text .container-wrapper .row .col-xxl-7 {
+    width: 55%;
+    padding-left: 72px;
+  }
+}
+@media (max-width: 1279px) {
+  section.image-with-text .container-wrapper .row .col-xxl-7 {
+    width: auto;
+    padding: 0 0 57px 0;
+  }
+}
+@media (max-width: 767px) {
+  section.image-with-text .container-wrapper .row .col-xxl-7 {
+    width: auto;
+    padding: 0 0 54px 0;
+  }
 }
 section.image-with-text .container-wrapper .row .col-xxl-7 h3, section.image-with-text .container-wrapper .row .col-xxl-7 .h3 {
   font-style: normal;
@@ -17740,7 +17862,18 @@ section.image-with-text .container-wrapper .row .col-xxl-7 h3, section.image-wit
   line-height: 140%;
   letter-spacing: -0.02em;
   color: #203940;
-  margin-bottom: 38px;
+  margin-bottom: 17px;
+}
+@media (max-width: 1399px) {
+  section.image-with-text .container-wrapper .row .col-xxl-7 h3, section.image-with-text .container-wrapper .row .col-xxl-7 .h3 {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 767px) {
+  section.image-with-text .container-wrapper .row .col-xxl-7 h3, section.image-with-text .container-wrapper .row .col-xxl-7 .h3 {
+    font-size: 28px;
+  }
 }
 section.image-with-text .container-wrapper .row .col-xxl-7 p {
   font-style: normal;
@@ -17750,6 +17883,20 @@ section.image-with-text .container-wrapper .row .col-xxl-7 p {
   color: #13272C;
   opacity: 0.7;
   margin-bottom: 30.6px;
+}
+@media (max-width: 1399px) {
+  section.image-with-text .container-wrapper .row .col-xxl-7 p {
+    font-size: 16px;
+    margin-bottom: 27px;
+  }
+}
+@media (max-width: 767px) {
+  section.image-with-text .container-wrapper .row .col-xxl-7 p {
+    font-size: 14px;
+  }
+}
+section.image-with-text .container-wrapper .row .col-xxl-7 p:last-child {
+  margin-bottom: 0px;
 }
 section.image-with-text.right-layout .container-wrapper {
   padding: 0 60px;
@@ -18834,8 +18981,24 @@ section.region-description {
   background-color: #203940;
   padding: 123px 0 142px;
 }
+@media (max-width: 1399px) {
+  section.region-description {
+    padding: 90px 290px 108px;
+  }
+}
+@media (max-width: 1200px) {
+  section.region-description {
+    padding: 90px 40px 108px;
+  }
+}
+@media (max-width: 767px) {
+  section.region-description {
+    padding: 66px 40px;
+  }
+}
 section.region-description .container {
   max-width: 955px;
+  padding: 0;
 }
 section.region-description .container .wysiwyg-content {
   font-weight: 400;
@@ -18844,6 +19007,16 @@ section.region-description .container .wysiwyg-content {
   text-align: center;
   letter-spacing: -0.02em;
   color: #FFFFFF;
+}
+@media (max-width: 1399px) {
+  section.region-description .container .wysiwyg-content {
+    font-size: 24px;
+  }
+}
+@media (max-width: 767px) {
+  section.region-description .container .wysiwyg-content {
+    font-size: 20px;
+  }
 }
 section.region-description .container .wysiwyg-content p {
   margin-bottom: 0;
@@ -18871,10 +19044,41 @@ body.page-id-585 section.image-with-text .container-wrapper .row .col-xxl-7 {
 section.list-of-adventures .container-wrapper {
   padding: 0px 255px 56px;
 }
+@media (max-width: 1600px) {
+  section.list-of-adventures .container-wrapper {
+    padding: 0 155px 56px;
+  }
+}
+@media (max-width: 1399px) {
+  section.list-of-adventures .container-wrapper {
+    padding: 0 38px 56px;
+  }
+}
+@media (max-width: 1200px) {
+  section.list-of-adventures .container-wrapper {
+    padding: 0 28px 56px;
+  }
+}
+@media (max-width: 767px) {
+  section.list-of-adventures .container-wrapper {
+    padding: 0 0 36px;
+  }
+}
 section.list-of-adventures .container-wrapper .heading {
   line-height: 140%;
   color: #203940;
   margin-bottom: 12px;
+}
+@media (max-width: 1399px) {
+  section.list-of-adventures .container-wrapper .heading {
+    font-size: 36px;
+  }
+}
+@media (max-width: 767px) {
+  section.list-of-adventures .container-wrapper .heading {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
 }
 section.list-of-adventures .container-wrapper p {
   font-weight: 400;
@@ -18884,11 +19088,56 @@ section.list-of-adventures .container-wrapper p {
   opacity: 0.7;
   margin-bottom: 42px;
 }
+@media (max-width: 1399px) {
+  section.list-of-adventures .container-wrapper p {
+    font-size: 16px;
+    margin-bottom: 55px;
+  }
+}
+@media (max-width: 1200px) {
+  section.list-of-adventures .container-wrapper p {
+    font-size: 16px;
+    margin-bottom: 42px;
+  }
+}
+@media (max-width: 767px) {
+  section.list-of-adventures .container-wrapper p {
+    margin-bottom: 24px;
+  }
+}
 section.list-of-adventures .container-wrapper .item-wrapper {
-  padding-bottom: 27px;
+  padding: 0;
+  margin-bottom: 27px;
+}
+@media (max-width: 1399px) {
+  section.list-of-adventures .container-wrapper .item-wrapper {
+    margin-bottom: 29px;
+  }
 }
 section.list-of-adventures .container-wrapper .item-wrapper .icon {
   padding-right: 32px;
+}
+@media (max-width: 1399px) {
+  section.list-of-adventures .container-wrapper .item-wrapper .icon {
+    padding-right: 34px;
+  }
+}
+@media (max-width: 767px) {
+  section.list-of-adventures .container-wrapper .item-wrapper .icon {
+    padding-right: 19px;
+  }
+}
+@media (max-width: 1399px) {
+  section.list-of-adventures .container-wrapper .item-wrapper .icon svg {
+    width: 27px;
+    height: 27px;
+  }
+}
+@media (max-width: 767px) {
+  section.list-of-adventures .container-wrapper .item-wrapper .icon svg {
+    width: 21px;
+    height: 21px;
+  }
 }
 section.list-of-adventures .container-wrapper .item-wrapper .label {
   font-weight: 500;
@@ -18898,14 +19147,77 @@ section.list-of-adventures .container-wrapper .item-wrapper .label {
   color: #203940;
   margin: 0;
 }
+@media (max-width: 1399px) {
+  section.list-of-adventures .container-wrapper .item-wrapper .label {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  section.list-of-adventures .container-wrapper .item-wrapper .label {
+    font-size: 18px;
+  }
+}
 section.list-of-adventures .container-wrapper .horizontal-line {
   border: 1px solid #D2D2D2;
   margin-top: 29px;
   margin-bottom: 0px;
 }
+@media (max-width: 1399px) {
+  section.list-of-adventures .container-wrapper .horizontal-line {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 767px) {
+  section.list-of-adventures .container-wrapper .horizontal-line {
+    margin-top: 7px;
+  }
+}
 
+body.page-id-585 section#list-of-adventures-4 {
+  padding-top: 101px;
+}
+@media (max-width: 1399px) {
+  body.page-id-585 section#list-of-adventures-4 {
+    padding-top: 131px;
+  }
+}
+@media (max-width: 1200px) {
+  body.page-id-585 section#list-of-adventures-4 {
+    padding-top: 90px;
+  }
+}
+@media (max-width: 767px) {
+  body.page-id-585 section#list-of-adventures-4 {
+    padding-top: 54px;
+  }
+}
 body.page-id-585 section#list-of-adventures-7 .container-wrapper {
   padding: 0px 255px 28px;
+}
+@media (max-width: 1600px) {
+  body.page-id-585 section#list-of-adventures-7 .container-wrapper {
+    padding: 0 155px 56px;
+  }
+}
+@media (max-width: 1399px) {
+  body.page-id-585 section#list-of-adventures-7 .container-wrapper {
+    padding: 0 38px 64px;
+  }
+}
+@media (max-width: 1200px) {
+  body.page-id-585 section#list-of-adventures-7 .container-wrapper {
+    padding: 0 28px 20px;
+  }
+}
+@media (max-width: 767px) {
+  body.page-id-585 section#list-of-adventures-7 .container-wrapper {
+    padding: 0;
+  }
+}
+@media (max-width: 1200px) {
+  body.page-id-585 section#list-of-adventures-7 .container-wrapper .row .col-xxl-4 .item-wrapper {
+    margin-bottom: 0;
+  }
 }
 body.page-id-585 section#list-of-adventures-7 .container-wrapper hr {
   display: none;
