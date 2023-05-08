@@ -27,11 +27,13 @@ section.region-post-slider {
             .slick-track {
                 display: flex;
                 gap: 24px;
-                transform: translate3d(-1552px, 0px, 0px) !important;
+                justify-content: center;
+                // transform: translate3d(-1552px, 0px, 0px) !important;
                 margin-bottom: 50px;
                 .post-item-slider-wrapper {
                     position: relative;
                     width: auto !important;
+                    
                     img {
                         width: 100%;
                     }

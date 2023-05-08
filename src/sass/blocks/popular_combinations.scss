@@ -1,52 +1,144 @@
 section.popular-combinations {
-    margin-bottom: 68px;
     .container-wrapper {
-        margin-top: 117px;
-        padding: 0 45px;
-        .row {
-            all: unset;
-            .content-wrapper {
+        padding: 117px 85px 68px;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 63px;
+        row-gap: 56px;
+        @media (max-width: 1700px) {
+            width: inherit;
+        }
+        @media (max-width: 1399px) {
+            padding: 90px 38px 20px;
+            column-gap: 40px;
+            row-gap: 46px;
+        }
+        @media (max-width: 1200px) {
+            padding: 59px 28px 4px;
+            column-gap: 29px;
+            row-gap: 40px;
+        }
+        @media (max-width: 767px) {
+            display: block;
+            padding: 40px 0px 0px;
+        }
+        .col {
+            @media (max-width: 1700px) {
+                display: inline-grid;
+                justify-content: center;
+            }
+            @media (max-width: 767px) {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                column-gap: 63px;
-                row-gap: 56px;
-                padding: initial;
-                .column {
-                    width: fit-content;
+                margin-bottom: 32px;
+                &:last-child {
+                    margin-bottom: -5px;
+                }
+            }
+            .image-wrapper {
+                display: flex;
+                @media (max-width: 1200px) {
+                    justify-content: center;
+                }
+                img {
+                    @media (max-width: 1700px) {
+                        width: 286px;
+                        height: 440px;
+                    }
+                    @media (max-width: 1399px) {
+                        width: 285px;
+                    }
+                    @media (max-width: 1270px) {
+                        width: 230px;
+                        height: 280px;
+                    }
+                    @media (max-width: 1024px) {
+                        width: 169px;
+                    }
+                    @media (max-width: 767px) {
+                        width: 265px;
+                    }
+                    @media (max-width: 500px) {
+                        width: 169px;
+                    }
+                }
+                span {
                     svg {
                         position: absolute;
                         margin-left: -1px;
-                    }
-                    h4 {
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 36px;
-                        line-height: 120%;
-                        letter-spacing: -0.02em;
-                        color: #203940;
-                        margin-top: 42px;
-                        margin-bottom: 12px;
-                    }
-                    .location {
-                        .map-icon {
-                            display: inline-block;
-                            vertical-align: super;
+                        @media (max-width: 1270px) {
+                            height: 280px;
+                            margin-left: -7px;
                         }
-                        p {
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 24px;
-                        line-height: 170%;
-                        color: #13272C;
-                        opacity: 0.7;
-                        margin-bottom: initial;
-                        margin-left: 32px;
-                        display: inline-block;
-                        vertical-align: top;
+                    }
+                }
+            }
+            h4 {
+                // font-family: 'Cera Pro';
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 120%;
+                letter-spacing: -0.02em;
+                color: #203940;
+                margin-top: 42px;
+                margin-bottom: 12px;
+                @media (max-width: 1399px) {
+                    font-size: 28px;
+                    margin-top: 32px;
+                    margin-bottom: 8px;
+                }
+                @media (max-width: 1200px) {
+                    max-width: 333px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 24px;
+                    margin-top: 28px;
+                }
+            }
+            .location {
+                display: flex;
+                align-items: center;
+                @media (max-width: 1200px) {
+                    max-width: 333px;
+                }
+                @media (max-width: 1200px) {
+                    align-items: flex-start;
+                }
+                span {
+                    @media (max-width: 1200px) {
+                        padding-top: 2px; 
+                    }
+                    @media (max-width: 767px) {
+                        padding-top: 0px;
+                    }
+                    svg {
+                        height: 20px;
+                        @media (max-width: 1399px) {
+                            width: 18px;
+                            height: 18px;
                         }
+                        @media (max-width: 1200px) {
+                            height: 30px;
+                        }
+                    }
+                }
+                p {
+                    // font-family: 'Cera Pro';
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 170%;
+                    color: #13272C;
+                    opacity: 0.7;
+                    margin-bottom: 0;
+                    margin-left: 12px;
+                    @media (max-width: 1399px) {
+                        font-size: 20px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 18px;
                     }
                 }
             }
         }
     }
 }
+
