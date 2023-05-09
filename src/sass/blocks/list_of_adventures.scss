@@ -101,7 +101,7 @@ section.list-of-adventures {
 }
 
 body {
-    &.page-id-585 {
+    &.page-id-489 {
         section {
             &#list-of-adventures-4 {
                 padding-top: 101px;
@@ -117,7 +117,7 @@ body {
             }
         }
     }
-    &.page-id-585 {
+    &.page-id-489 {
         section {
             &#list-of-adventures-7 {
                 .container-wrapper {
@@ -133,12 +133,16 @@ body {
                     }
                     @media (max-width: 767px) {
                         padding: 0;
+                        margin-bottom: -28px;
                     }
                     .row {
                         .col-xxl-4 {
                             .item-wrapper {
                                 @media (max-width: 1200px) {
                                     margin-bottom: 0;
+                                }
+                                @media (max-width: 1200px) {
+                                    margin-bottom: 28px;
                                 }
                             }
                         }
