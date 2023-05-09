@@ -10,7 +10,7 @@
                 slidesToScroll: 1,
                 dots: true,
                 arrows: true,
-                adaptiveHeight: true,
+                adaptiveHeight: false,
                 prevArrow: '<button class="slick-arrow slick-prev">'+ $arrowLeft +'</button>',
                 nextArrow: '<button class="slick-arrow slick-next">'+ $arrowRight +'</button>',
             });
