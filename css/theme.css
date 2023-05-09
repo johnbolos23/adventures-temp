@@ -19022,25 +19022,6 @@ section.region-description .container .wysiwyg-content p {
   margin-bottom: 0;
 }
 
-body.page-id-585 section.image-with-text {
-  margin-bottom: 101px;
-}
-body.page-id-585 section.image-with-text .container-wrapper {
-  padding: 0px 88px;
-  margin-top: 114px;
-}
-body.page-id-585 section.image-with-text .container-wrapper .row {
-  margin-top: 0px;
-}
-body.page-id-585 section.image-with-text .container-wrapper .row .col-xxl-5 {
-  width: 37.1%;
-}
-body.page-id-585 section.image-with-text .container-wrapper .row .col-xxl-7 {
-  padding-left: 116px;
-  margin: 0;
-  width: 62.9%;
-}
-
 section.list-of-adventures .container-wrapper {
   padding: 0px 255px 56px;
 }
@@ -19173,53 +19154,59 @@ section.list-of-adventures .container-wrapper .horizontal-line {
   }
 }
 
-body.page-id-585 section#list-of-adventures-4 {
+body.page-id-489 section#list-of-adventures-4 {
   padding-top: 101px;
 }
 @media (max-width: 1399px) {
-  body.page-id-585 section#list-of-adventures-4 {
+  body.page-id-489 section#list-of-adventures-4 {
     padding-top: 131px;
   }
 }
 @media (max-width: 1200px) {
-  body.page-id-585 section#list-of-adventures-4 {
+  body.page-id-489 section#list-of-adventures-4 {
     padding-top: 90px;
   }
 }
 @media (max-width: 767px) {
-  body.page-id-585 section#list-of-adventures-4 {
+  body.page-id-489 section#list-of-adventures-4 {
     padding-top: 54px;
   }
 }
-body.page-id-585 section#list-of-adventures-7 .container-wrapper {
+body.page-id-489 section#list-of-adventures-7 .container-wrapper {
   padding: 0px 255px 28px;
 }
 @media (max-width: 1600px) {
-  body.page-id-585 section#list-of-adventures-7 .container-wrapper {
+  body.page-id-489 section#list-of-adventures-7 .container-wrapper {
     padding: 0 155px 56px;
   }
 }
 @media (max-width: 1399px) {
-  body.page-id-585 section#list-of-adventures-7 .container-wrapper {
+  body.page-id-489 section#list-of-adventures-7 .container-wrapper {
     padding: 0 38px 64px;
   }
 }
 @media (max-width: 1200px) {
-  body.page-id-585 section#list-of-adventures-7 .container-wrapper {
+  body.page-id-489 section#list-of-adventures-7 .container-wrapper {
     padding: 0 28px 20px;
   }
 }
 @media (max-width: 767px) {
-  body.page-id-585 section#list-of-adventures-7 .container-wrapper {
+  body.page-id-489 section#list-of-adventures-7 .container-wrapper {
     padding: 0;
+    margin-bottom: -28px;
   }
 }
 @media (max-width: 1200px) {
-  body.page-id-585 section#list-of-adventures-7 .container-wrapper .row .col-xxl-4 .item-wrapper {
+  body.page-id-489 section#list-of-adventures-7 .container-wrapper .row .col-xxl-4 .item-wrapper {
     margin-bottom: 0;
   }
 }
-body.page-id-585 section#list-of-adventures-7 .container-wrapper hr {
+@media (max-width: 1200px) {
+  body.page-id-489 section#list-of-adventures-7 .container-wrapper .row .col-xxl-4 .item-wrapper {
+    margin-bottom: 28px;
+  }
+}
+body.page-id-489 section#list-of-adventures-7 .container-wrapper hr {
   display: none;
 }
 
