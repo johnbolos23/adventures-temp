@@ -7,49 +7,52 @@ get_header();
 
 <section class="breadcrumbs-section">
     <div class="container">
-        <a href="<?= site_url(); ?>">Home</a>
-        <?= get_template_part('inc/svg/chevron-right'); ?>
-        <span><b><?= get_the_title(); ?></b></span>
+        <div class="container-wrapper">
+            <a href="<?= site_url(); ?>">Home</a>
+            <?= get_template_part('inc/svg/chevron-right'); ?>
+            <span><b><?= get_the_title(); ?></b></span>
+        </div>
     </div>
 </section>
 
-<section class="region-header pos-relative <?php echo get_sub_field('text_position'); ?>-layout" style="background-image: url(<?php echo get_field('image'); ?>);" id="region-header-<?= get_row_index(); ?>">
-    <div class="container pos-relative">
+<section class="single-region-header pos-relative" id="single-region-header-<?= get_row_index(); ?>">
+    <img src="<?php echo get_field('desktop_image'); ?>" class="for-desktop" />
+    <img src="<?php echo get_field('laptop_image'); ?>" class="for-laptop" />
+    <img src="<?php echo get_field('tablet_image'); ?>" class="for-tablet" />
+    <img src="<?php echo get_field('mobile_image'); ?>" class="for-mobile" />
+    <div class="text-wrapper">
         <h1 class="heading"><?php echo get_field('heading'); ?></h1>
     </div>
 </section>
 
 <section class="single-region-description">
     <div class="container">
-        <div class="row">
-            <div class="col-xxl-3 col-xl-3">
-                <img src="<?php echo get_field('first_image'); ?> ">             
+    <h3 class="heading"><?php echo get_field('description_heading'); ?></h3>
+        <div class="container-wrapper d-flex">
+            <img src="<?php echo get_field('description_image'); ?> ">   
+            <div class="wysiwyg-content">
+                <?php echo get_field('description'); ?> 
             </div>
-            <div class="col-xxl-5 col-xl-5">
-                <h3><?php echo get_field('first_heading'); ?></h3>
-                <?php echo get_field('first_content'); ?>
-            </div>
-            <div class="col-xxl-4 col-xl-4 text-center">
-                <div class="map">
-                    <img src="http://localhost/adventures-of-distinctions/wp-content/uploads/2023/04/Mask-group-1.png">
-                </div>
+            <div class="map-placeholder">
+                <img src="<?php echo get_field('map'); ?> "> 
             </div>
         </div>
     </div>
 </section>
 
-
 <section class="single-region-about">
     <div class="container">
-        <div class="row">
-            <div class="col-xxl-3 col-xl-3">
-                <img class="second_image" src="<?php echo get_field('second_image'); ?> "> 
-                <img src="<?php echo get_field('third_image'); ?> "> 
-                <img src="<?php echo get_field('fourth_image'); ?> "> 
-            </div>
-            <div class="col-xxl-9 col-xl-9">
-                <h3><?php echo get_field('second_heading'); ?></h3>
-                <?php echo get_field('second_content'); ?>
+        <div class="container-wrapper">
+            <h3 class="heading"><?php echo get_field('about_heading'); ?></h3>
+            <div class="row">
+                <?php foreach( get_field('about_content') as $content ) : ?>
+                    <div class="col-xxl-12 d-flex">
+                        <img src="<?php echo $content['image'];?> "> 
+                        <div class="wysiwyg-content">
+                            <?php echo $content['description'];?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
@@ -57,23 +60,23 @@ get_header();
 
 <section class="single-region-summary">
     <div class="container">
-        <div class="row">
-            <div class="col-xxl-3 col-xl-3">
-                    <img src="<?php echo get_field('fifth_image'); ?> "> 
-                    <img src="<?php echo get_field('sixth_image'); ?> "> 
-                </div>
-                <div class="col-xxl-9 col-xl-9">
-                    <h3>Summary</h3>
-                    <?php foreach( get_field('summary') as $item ) : ?>
-                        <div class="summary-wrapper">
-                            <p class="summary_labels"><?php echo $item['summary_labels'];?></p>
-                            <p class="summary_labels_description"><?php echo $item['summary_labels_description'];?></p>
-                        </div>
+        <h3 class="heading"><?php echo get_field('summary_heading'); ?></h3>
+        <div class="container-wrapper d-flex">
+            <div class="summary-image">
+                <?php foreach( get_field('summary_image') as $content ) : ?>
+                    <img src="<?php echo $content['image'];?> "> 
+                <?php endforeach; ?>
+            </div>
+            <div class="summary-content-wrapper">
+                <div class="summary-content">
+                    <?php foreach( get_field('summary_content') as $content ) : ?>
+                        <p class="summary-labels"><?php echo $content['summary_labels'];?></p>
+                        <p class="summary-labels-description"><?php echo $content['summary_labels_description'];?></p>
                     <?php endforeach; ?>
-                    <div class="contact_us">
-                        <h3>Contact Us</h3>
-                        <?php echo get_field('contact_us_content'); ?>
-                    </div>
+                </div>      
+                <h3 class="heading">Contact Us</h3>
+                <div class="wysiwyg-content">
+                    <?php echo get_field('contact_content'); ?>
                 </div>
             </div>
         </div>

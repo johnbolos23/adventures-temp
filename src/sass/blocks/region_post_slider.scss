@@ -63,7 +63,7 @@ section.region-post-slider {
                 @media (max-width: 1200px) {
                     margin: 0 -15px;
                 }
-                @media (max-width: 1250px) {
+                @media (max-width: 767px) {
                     margin: 0;
                 }
             }
@@ -78,15 +78,17 @@ section.region-post-slider {
                 }
                 @media (max-width: 767px) {
                     margin-bottom: 35px;
+                    gap: 0;
                 }
                 .post-item-slider-wrapper {
                     position: relative;
                     width: auto !important;
+                    @media (max-width: 767px) {
+                        width: inherit !important;
+                    }
                     img {
                         width: 100%;
-                        // position: relative;
                         @media (max-width: 1399px) {
-                            // width: 375px;
                             height: 320px;
                         }
                     }
@@ -111,6 +113,7 @@ section.region-post-slider {
                         @media (max-width: 767px) {
                             font-size: 20px;
                             margin: 24px 0 12px;
+                            width: auto;
                         }
                     }
                     p {
@@ -166,7 +169,7 @@ section.region-post-slider {
                 margin-bottom: 0;
                 .slick-prev {
                     z-index: 1;
-                    left: -32px;
+                    left: -28px;
                     top: 300px;
                     @media (max-width: 1600px) {
                         top: 55%;
@@ -176,6 +179,15 @@ section.region-post-slider {
                     }
                     @media (max-width: 1399px) {
                         top: 300px;
+                    }
+                    @media (max-width: 1200px) {
+                        left: -15px;
+                    }
+                    @media (max-width: 767px) {
+                        top: 305px;
+                    }
+                    @media (max-width: 576px) {
+                        left: -17px;
                     }
                     &::before {
                         display: none;
@@ -203,6 +215,13 @@ section.region-post-slider {
                     }
                     @media (max-width: 1399px) {
                         top: 300px;
+                    }
+                    @media (max-width: 1200px) {
+                        right: 1%;
+                    }
+                    @media (max-width: 767px) {
+                        right: 2%;
+                        top: 305px;
                     }
                     &::before {
                         display: none;
@@ -254,7 +273,7 @@ section.region-post-slider {
 }
 
 body {
-    &.page-id-520 {
+    &.page-id-609 {
         section {
             &#region-post-slider-3 {
                 .container-wrapper {
