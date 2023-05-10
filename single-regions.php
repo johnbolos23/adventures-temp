@@ -27,15 +27,20 @@ get_header();
 
 <section class="single-region-description">
     <div class="container">
-    <h3 class="heading"><?php echo get_field('description_heading'); ?></h3>
+        <div class="top-wrapper d-flex">
+            <h3 class="heading"><?php echo get_field('description_heading'); ?></h3>
+            <div class="map-placeholder">
+                <img src="<?php echo get_field('map'); ?> "> 
+            </div>
+        </div>
         <div class="container-wrapper d-flex">
             <img src="<?php echo get_field('description_image'); ?> ">   
             <div class="wysiwyg-content">
                 <?php echo get_field('description'); ?> 
             </div>
-            <div class="map-placeholder">
+            <!-- <div class="map-placeholder">
                 <img src="<?php echo get_field('map'); ?> "> 
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

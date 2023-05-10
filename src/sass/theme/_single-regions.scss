@@ -68,16 +68,30 @@ section.single-region-header {
 
 // Single Region Description
 section.single-region-description {
-    .heading {
-        // font-family: 'Cera Pro';
-        font-size: 36px;
-        color: #203940;
-        padding: 105px 0 0 430px;
-        margin-bottom: 29px;
+    .top-wrapper {
+        justify-content: space-between;
+        height: 185px;
+        padding: 0;
+        .heading {
+            // font-family: 'Cera Pro';
+            font-size: 36px;
+            color: #203940;
+            padding: 0 0 0 430px;
+            margin: 105px 0 29px 0;
+            width: 811px;
+        }
+        .map-placeholder {
+            padding-top: 86px;
+            img {
+                max-width: fit-content;
+                height: auto;
+            }
+        }
     }
     .container-wrapper {
         img {
-            height: fit-content;
+            max-width: 320px;
+            height: 260px;
         }
         .wysiwyg-content {
             // font-family: 'Cera Pro';
@@ -90,18 +104,14 @@ section.single-region-description {
                 width: 740px;
             }
         }
-        .map-placeholder {
-            img {
-                max-width: fit-content;
-            }
-        }
+        
     }
 }
 
 // Single Region About
 section.single-region-about {
     .container-wrapper {
-        padding-top: 84px;
+        padding: 100px 0 52px 0;
         .heading {
             // font-family: 'Cera Pro';
             font-size: 36px;
@@ -115,7 +125,8 @@ section.single-region-about {
                 padding: 0;
                 margin-bottom: 48px;
                 img {
-                    height: fit-content;
+                    max-width: 320px;
+                    height: 220px
                 }
                 .wysiwyg-content {
                     // font-family: 'Cera Pro';
@@ -147,8 +158,9 @@ section.single-region-summary {
         .summary-image {
             display: grid;
             row-gap: 48px;
+            height: fit-content;
             img {
-                max-width: fit-content;
+                max-width: 320px;
             }
         }
         .summary-content-wrapper {
