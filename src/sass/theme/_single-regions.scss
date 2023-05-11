@@ -111,7 +111,7 @@ section.single-region-description {
 // Single Region About
 section.single-region-about {
     .container-wrapper {
-        padding: 100px 0 52px 0;
+        padding: 100px 0 100px 0;
         .heading {
             // font-family: 'Cera Pro';
             font-size: 36px;
@@ -119,25 +119,25 @@ section.single-region-about {
             padding-left: 430px;
             margin-bottom: 44px;
         }
-        .row {
-            margin: 0;
-            .col-xxl-12 {
-                padding: 0;
-                margin-bottom: 48px;
+        .about-content {
+            .image-wrapper {
+                display: grid;
+                row-gap: 48px;
                 img {
                     max-width: 320px;
+                    width: -webkit-fill-available;
                     height: 220px
                 }
-                .wysiwyg-content {
-                    // font-family: 'Cera Pro';
-                    font-size: 18px;
-                    line-height: 170%;
-                    color: #13272C;
-                    opacity: 0.7;
-                    padding-left: 108px;
-                    p {
-                        width: 740px;
-                    }
+            }
+            .wysiwyg-content {
+                // font-family: 'Cera Pro';
+                font-size: 18px;
+                line-height: 170%;
+                color: #13272C;
+                opacity: 0.7;
+                padding-left: 108px;
+                p {
+                    width: 740px;
                 }
             }
         }
@@ -199,8 +199,12 @@ section.single-region-summary {
                 font-size: 24px;
                 line-height: 170%;
                 color: #13272C;
-                strong {
-                    color: #42BA7D;
+                p { 
+                    a {
+                        color: #42BA7D;
+                        text-decoration: none;
+                        font-weight: 700;
+                    }
                 }
             }
         }

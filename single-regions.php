@@ -4,11 +4,18 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 ?>
+<?php  $theRegionType = get_the_terms( get_the_ID(), 'regions_tax' ); ?>
 
 <section class="breadcrumbs-section">
     <div class="container">
         <div class="container-wrapper">
             <a href="<?= site_url(); ?>">Home</a>
+            
+            <?php if( $theRegionType ) : ?>
+                <?= get_template_part('inc/svg/chevron-right'); ?>
+                <a href="<?= get_term_link( $theRegionType[0]->term_id ); ?>"><?= $theRegionType[0]->name; ?></a>
+            <?php endif; ?>
+
             <?= get_template_part('inc/svg/chevron-right'); ?>
             <span><b><?= get_the_title(); ?></b></span>
         </div>
@@ -49,15 +56,15 @@ get_header();
     <div class="container">
         <div class="container-wrapper">
             <h3 class="heading"><?php echo get_field('about_heading'); ?></h3>
-            <div class="row">
-                <?php foreach( get_field('about_content') as $content ) : ?>
-                    <div class="col-xxl-12 d-flex">
+            <div class="about-content d-flex">
+                <div class="image-wrapper">
+                    <?php foreach( get_field('about_image') as $content ) : ?>
                         <img src="<?php echo $content['image'];?> "> 
-                        <div class="wysiwyg-content">
-                            <?php echo $content['description'];?>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
+                </div>
+                <div class="wysiwyg-content">
+                    <?php echo get_field('about_description'); ?>
+                </div>
             </div>
         </div>
     </div>
