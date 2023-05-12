@@ -1,6 +1,12 @@
 section.region-header {
     display: flex;
     justify-content: center;
+    height: 400px;
+    background-position: 50% 100%;
+    @media (max-width: 1399px) {
+        height: 300px;
+        background-position: 50% 85%;
+    }
     .for-desktop {
         @media (max-width: 1399px) {
             display: none;

@@ -1,135 +1,210 @@
+// Single Region Header
+section.single-region-header {
+    display: flex;
+    .for-desktop {
+        @media (max-width: 1399px) {
+            display: none;
+        }
+    }
+    .for-laptop {
+        display: none;
+        @media (max-width: 1399px) {
+            display: block;
+            width: -webkit-fill-available;
+        }
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+    .for-tablet {
+        display: none;
+        @media (max-width: 1200px) {
+            display: block;
+            width: -webkit-fill-available;
+        }
+        @media (max-width: 540px) {
+            display: none;
+        }
+    }
+    .for-mobile {
+        @media (max-width: 9999px) {
+            display: none;
+        }
+        @media (max-width: 540px) {
+            display: block;
+            width: -webkit-fill-available;
+        }
+    }
+    .text-wrapper {
+        position: absolute;
+        bottom: 71px;
+        padding-left: 205px;
+        @media (max-width: 1399px) {
+            padding-left: 50px;
+            bottom: 54px;
+        }
+        @media (max-width: 1200px) {
+            padding-left: 40px;
+        }
+        @media (max-width: 1200px) {
+            padding-left: 20px;
+        }
+        .heading {
+            // font-family: 'Cera Pro';
+            font-size: 56px;
+            line-height: 110%;
+            color: #FFFFFF;
+            margin: 0;
+            @media (max-width: 1399px) {
+                font-size: 48px;
+                line-height: 120%;
+            }
+            @media (max-width: 767px) {
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+// Single Region Description
 section.single-region-description {
-    margin-top: 105px;
-    margin-bottom: 69.4px;
-    .col-xxl-3 {
-        padding-left: 0;
-        margin-right: 0;
-        padding-right: 110px;
-        img {
-            padding-top: 87px;
+    .top-wrapper {
+        justify-content: space-between;
+        height: 185px;
+        padding: 0;
+        .heading {
+            // font-family: 'Cera Pro';
+            font-size: 36px;
+            color: #203940;
+            padding: 0 0 0 430px;
+            margin: 105px 0 29px 0;
+            width: 811px;
+        }
+        .map-placeholder {
+            padding-top: 86px;
+            img {
+                max-width: fit-content;
+                height: auto;
+            }
         }
     }
-    .col-xxl-5 {
-        padding-left: 0;
-        padding-right: 0;
-        h3 {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 36px;
-            line-height: 120%;
-            letter-spacing: -0.02em;
-            color: #203940;
-            margin-bottom: 0;
-            padding-bottom: 29px;
+    .container-wrapper {
+        img {
+            max-width: 320px;
+            height: 260px;
         }
-        p {
-            font-style: normal;
-            font-weight: 400;
+        .wysiwyg-content {
+            // font-family: 'Cera Pro';
             font-size: 18px;
             line-height: 170%;
             color: #13272C;
             opacity: 0.7;
-            margin-bottom: 30.6px;
-            max-width: 740px;
-        }
-    }
-    .col-xxl-4 {
-        padding-left: 85px;
-        padding-right: 0;
-    }
-}
-
-section.single-region-about {
-    margin-bottom: 69.4px;
-    .col-xxl-3 {
-        padding-left: 0px;
-        padding-right: 110px;
-        img {
-            margin-bottom: 48px;
-        }
-        img.second_image {
-            padding-top: 87px;
-        }
-    }
-    .col-xxl-9 {
-        padding-left: 0px;
-        h3 {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 36px;
-            line-height: 120%;
-            letter-spacing: -0.02em;
-            color: #203940;
-            margin-bottom: 44px;
-        }
-        p {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 170%;
-            color: #13272C;
-            opacity: 0.7;
-            margin-bottom: 30.6px;
-            max-width: 740px;
-        }
-    }
-}
-
-section.single-region-summary {
-    margin-bottom: 50px;
-    .col-xxl-3 {
-        margin-top: 87px;
-        padding-left: 0px;
-        padding-right: 110px;
-        img {
-            margin-bottom: 48px;
-        }
-    }
-    .col-xxl-9 {
-        padding-left: 0px;
-        h3 {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 36px;
-            line-height: 120%;
-            letter-spacing: -0.02em;
-            color: #203940;
-            margin-bottom: 44px;
-        }
-        p {
-            font-style: normal;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 170%;
-            color: #13272C;
-            opacity: 0.7;
-            margin-bottom: 24px;
-        }
-        .summary-wrapper {
-            display: flex;
-            p.summary_labels {
-                flex: 0 0 204px;
-                margin-right: 46px;
-                height: 41px;
-            }
-            p.summary_labels_description {
-                font-weight: 400;
-                max-width: 490px;
-            }
-        }
-        .contact_us {
-            margin-top: 54px;
-            margin-bottom: 56px;
-            h3 {
-                margin-bottom: 35px;
-            }
+            padding: 0 85px 0 108px;
             p {
-                font-weight: 400;
-                opacity: inherit;
-                a {
+                width: 740px;
+            }
+        }
+        
+    }
+}
+
+// Single Region About
+section.single-region-about {
+    .container-wrapper {
+        padding: 100px 0 100px 0;
+        .heading {
+            // font-family: 'Cera Pro';
+            font-size: 36px;
+            color: #203940;
+            padding-left: 430px;
+            margin-bottom: 44px;
+        }
+        .about-content {
+            .image-wrapper {
+                display: grid;
+                row-gap: 48px;
+                img {
+                    max-width: 320px;
+                    width: -webkit-fill-available;
+                    height: 220px
+                }
+            }
+            .wysiwyg-content {
+                // font-family: 'Cera Pro';
+                font-size: 18px;
+                line-height: 170%;
+                color: #13272C;
+                opacity: 0.7;
+                padding-left: 108px;
+                p {
+                    width: 740px;
+                }
+            }
+        }
+    }
+}
+
+// Single Region Summary
+section.single-region-summary {
+    .heading {
+        // font-family: 'Cera Pro';
+        font-size: 36px;
+        color: #203940;
+        padding: 0 0 0 430px;
+        margin-bottom: 44px;
+    }
+    .container-wrapper {
+        padding-bottom: 90px;
+        .summary-image {
+            display: grid;
+            row-gap: 48px;
+            height: fit-content;
+            img {
+                max-width: 320px;
+            }
+        }
+        .summary-content-wrapper {
+            padding-left: 108px;
+            .summary-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: min-content;
+                height: fit-content;
+                .summary-labels {
+                    // font-family: 'Cera Pro';
                     font-weight: 700;
-                    color: #42BA7D;
-                    text-decoration: none;
+                    font-size: 24px;
+                    line-height: 170%;
+                    color: #13272C;
+                    opacity: 0.7;
+                    width: 204px;
+                    margin: 0;
+                }
+                .summary-labels-description {
+                    // font-family: 'Cera Pro';
+                    font-size: 24px;
+                    line-height: 170%;
+                    color: #13272C;
+                    opacity: 0.7;
+                    width: 490px;
+                    margin: 0 0 24px 46px;
+                }
+            }
+            .heading {
+                padding: 0;
+                margin: 54px 0 35px 0;
+            }
+            .wysiwyg-content {
+                // font-family: 'Cera Pro';
+                font-size: 24px;
+                line-height: 170%;
+                color: #13272C;
+                p { 
+                    a {
+                        color: #42BA7D;
+                        text-decoration: none;
+                        font-weight: 700;
+                    }
                 }
             }
         }

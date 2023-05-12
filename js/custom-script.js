@@ -13,6 +13,24 @@
                 adaptiveHeight: false,
                 prevArrow: '<button class="slick-arrow slick-prev">'+ $arrowLeft +'</button>',
                 nextArrow: '<button class="slick-arrow slick-next">'+ $arrowRight +'</button>',
+                responsive: [
+					{
+						breakpoint: 1200,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1,
+							arrows: true,
+						},
+                    },
+                    {
+                        breakpoint: 768,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							arrows: true,
+						},
+                    },
+				],
             });
 
         }
