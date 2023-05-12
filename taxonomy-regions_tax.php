@@ -26,8 +26,7 @@ if( get_field('use_this_page_content', 'term_'. get_queried_object()->term_id) )
 </section>
 
 
-<section class="region-header pos-relative" id="region-header-<?= get_row_index(); ?>">
-    <img src="<?= get_field('image','term_'. get_queried_object()->term_id ); ?>" class="for-desktop" />
+<section class="region-header pos-relative" style="background-image: url(<?= get_field('image','term_'. get_queried_object()->term_id ); ?>);">
     <div class="text-wrapper">
         <h1 class="heading"><?= get_queried_object()->name; ?></h1>
     </div>
