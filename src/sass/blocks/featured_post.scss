@@ -3,10 +3,13 @@ section.featured_post{
     padding-top: 70px;
     padding-bottom: 66px;
     @media (max-width: 1399px) {
-        padding-bottom: 80px;
-    }
-    @media (max-width: 992px) {
         padding-bottom: 50px;
+    }
+    @media (max-width: 1200px) {
+        padding-bottom: 35px;
+    }
+    @media (max-width: 767px) {
+        padding-bottom: 28px;
     }
     .container {
         @media (max-width: 1399px) {
