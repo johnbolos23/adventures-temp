@@ -4,7 +4,7 @@
             <div class="row">
                 <?php if( get_sub_field('type_of_region') ) : ?>
                     <?php foreach( get_sub_field('type_of_region') as $item ) : ?>
-                    <div class="col-xxl-4 col-xl-4 text-center">
+                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 col-6 text-center">
                         <div class="icon">
                             <?php echo $item['icon']; ?>
                         </div>
