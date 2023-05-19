@@ -78,63 +78,60 @@ if( get_field('use_this_page_content', 'term_'. get_queried_object()->term_id) )
 </section>
 
 
-<section class="page-section featured_post " id="featured_post-6">
+<section class="page-section featured_post <?php echo get_sub_field('custom_css'); ?>" id="featured_post-<?= get_row_index(); ?>">
+<?php 
+    if( get_sub_field('css_code') ){
+        $customCSS = str_replace('{{section_id}}', '#adventure-distinction #featured_post-'. get_row_index(), get_sub_field('css_code'));
+
+        echo '<style>'. $customCSS . '</style>';
+    }
+
+    if( get_sub_field('featured_type') != 'custom' ){
+        $args = array(
+            'post_type' => 'post',
+            'posts_per_page' => get_sub_field('number_of_items'),
+            'post_status' => 'publish',
+            'orderby' => 'post__in'
+        );
+    
+        if( get_sub_field('featured_type') == 'manual' && get_sub_field('select_posts') ){
+            $args['post__in'] = get_sub_field('select_posts');
+        }
+    
+        $theQuery = new WP_Query( $args );
+    }
+    
+?>
     <div class="container">
         <div class="container-wrapper">
             <h2 class="heading text-center">Explore More</h2>
-
+            <?php if( get_sub_field('featured_type') != 'custom' ) : ?>
+            <?php if( $theQuery->have_posts() ) : ?>
             <div class="featured-post-items">
                 <div class="row">
-                    <div class="col-12 col-md-6 col-lg-3 post-item">
-                        <div class="post-item-container">
-                            <div class="post-item-wrapper pos-relative">
-                                <img src="http://localhost/adventures/wp-content/uploads/2023/02/Rectangle-10-1-1.jpg">
+                    <?php 
+                    while( $theQuery->have_posts() ) {
+                        $theQuery->the_post();
 
-                                <h3 class="heading">Extraordinary Regions Airport Gateways</h3>
-                            </div>
-                            <div class="post-read-more has-color" style="background: #0ea9d1;">
-                                <a href="#" target="">learn more →</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 post-item">
-                        <div class="post-item-container">
-                            <div class="post-item-wrapper pos-relative">
-                                <img src="http://localhost/adventures/wp-content/uploads/2023/02/Rectangle-27-1.jpg">
-
-                                <h3 class="heading">Sample Itineraries</h3>
-                            </div>
-                            <div class="post-read-more has-color" style="background: #81c65b;">
-                                <a href="#" target="">see sample →</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 post-item">
-                        <div class="post-item-container">
-                            <div class="post-item-wrapper pos-relative">
-                                <img src="http://localhost/adventures/wp-content/uploads/2023/02/Rectangle-10-3.jpg">
-
-                                <h3 class="heading">Popular Combinations</h3>
-                            </div>
-                            <div class="post-read-more has-color" style="background: #ee9f24;">
-                                <a href="#" target="">explore →</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3 post-item">
-                        <div class="post-item-container">
-                            <div class="post-item-wrapper pos-relative">
-                                <img src="http://localhost/adventures/wp-content/uploads/2023/02/Rectangle-10-4.jpg">
-
-                                <h3 class="heading">Frequently Asked Questions</h3>
-                            </div>
-                            <div class="post-read-more has-color" style="background: #7856a4;">
-                                <a href="#" target="">view faqs →</a>
-                            </div>
-                        </div>
-                    </div>
+                        get_template_part('inc/helpers/post-item');
+                    }  
+                    wp_reset_postdata();
+                    ?>
                 </div>
             </div>
+            <?php endif; ?>
+            <?php else : ?>
+            <div class="featured-post-items">
+                <div class="row">
+                <?php 
+                while( have_rows('custom_items') ) {
+                    the_row();
+
+                    get_template_part('inc/helpers/post-item');
+                }  ?>
+                </div>
+            </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
@@ -143,6 +140,4 @@ if( get_field('use_this_page_content', 'term_'. get_queried_object()->term_id) )
 <?php 
 }
 
-get_footer(); 
-
-?>
+get_footer();?>

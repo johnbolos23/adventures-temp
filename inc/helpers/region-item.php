@@ -10,13 +10,11 @@ foreach( $theTerms as $category ){
 
 $theCategories = get_the_terms( get_the_ID(), 'region_cat' );
 ?>
-<div class="col-12 col-lg-4">
+<div class="col-12 col-md-6 col-lg-4">
     <div class="region-item-wrapper">
         <img src="<?= get_the_post_thumbnail_url(); ?>" />
-
         <div class="region-item-details">
             <h3 class="region-item-name"><a href="<?= get_the_permalink( get_the_ID() ); ?>"><?= get_the_title(); ?> <?= $termNames; ?></a></h3>
-            
             <p><?= get_the_content(); ?></p>
             <div class="region-item-categories d-flex">
                 <?php foreach( $theCategories as $category ) : ?>

@@ -34,20 +34,18 @@ get_header();
 
 <section class="single-region-description">
     <div class="container">
-        <div class="top-wrapper d-flex">
-            <h3 class="heading"><?php echo get_field('description_heading'); ?></h3>
-            <div class="map-placeholder">
-                <img src="<?php echo get_field('map'); ?> "> 
+    <h3 class="heading for-mobile"><?php echo get_field('description_heading'); ?></h3>
+        <div class="container-wrapper">
+            <img src="<?php echo get_field('description_image'); ?>" class="description-image" /> 
+            <div class="text-with-map-content">
+                <div class="text-wrapper">
+                    <h3 class="heading"><?php echo get_field('description_heading'); ?></h3>
+                    <div class="wysiwyg-content">
+                        <?php echo get_field('description'); ?> 
+                    </div>
+                </div>
+                <img src="<?php echo get_field('map'); ?>" class="map-placeholder" /> 
             </div>
-        </div>
-        <div class="container-wrapper d-flex">
-            <img src="<?php echo get_field('description_image'); ?> ">   
-            <div class="wysiwyg-content">
-                <?php echo get_field('description'); ?> 
-            </div>
-            <!-- <div class="map-placeholder">
-                <img src="<?php echo get_field('map'); ?> "> 
-            </div> -->
         </div>
     </div>
 </section>
@@ -55,15 +53,15 @@ get_header();
 <section class="single-region-about">
     <div class="container">
         <div class="container-wrapper">
-            <h3 class="heading"><?php echo get_field('about_heading'); ?></h3>
-            <div class="about-content d-flex">
+            <div class="about-content">
                 <div class="image-wrapper">
                     <?php foreach( get_field('about_image') as $content ) : ?>
                         <img src="<?php echo $content['image'];?> "> 
                     <?php endforeach; ?>
                 </div>
-                <div class="wysiwyg-content">
-                    <?php echo get_field('about_description'); ?>
+                <div class="text-wrapper">
+                    <h3 class="heading"><?php echo get_field('about_heading'); ?></h3>
+                    <div class="wysiwyg-content"><?php echo get_field('about_description'); ?></div>
                 </div>
             </div>
         </div>
@@ -72,7 +70,6 @@ get_header();
 
 <section class="single-region-summary">
     <div class="container">
-        <h3 class="heading"><?php echo get_field('summary_heading'); ?></h3>
         <div class="container-wrapper d-flex">
             <div class="summary-image">
                 <?php foreach( get_field('summary_image') as $content ) : ?>
@@ -80,15 +77,16 @@ get_header();
                 <?php endforeach; ?>
             </div>
             <div class="summary-content-wrapper">
+                <h3 class="heading"><?php echo get_field('summary_heading'); ?></h3>
                 <div class="summary-content">
                     <?php foreach( get_field('summary_content') as $content ) : ?>
                         <p class="summary-labels"><?php echo $content['summary_labels'];?></p>
                         <p class="summary-labels-description"><?php echo $content['summary_labels_description'];?></p>
                     <?php endforeach; ?>
                 </div>      
-                <h3 class="heading">Contact Us</h3>
-                <div class="wysiwyg-content">
-                    <?php echo get_field('contact_content'); ?>
+                <div class="contact-us-content">
+                    <h3 class="heading">Contact Us</h3>
+                    <div class="wysiwyg-content"><?php echo get_field('contact_content'); ?></div>
                 </div>
             </div>
         </div>
