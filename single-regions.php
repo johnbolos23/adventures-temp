@@ -23,29 +23,64 @@ get_header();
 </section>
 
 <section class="single-region-header pos-relative" id="single-region-header-<?= get_row_index(); ?>">
-    <img src="<?php echo get_field('desktop_image'); ?>" class="for-desktop" />
+    <img src="<?php echo get_field('desktop_image') ? get_field('desktop_image') : get_the_post_thumbnail_url(); ?>" class="for-desktop" />
+    <?php if( get_field('laptop_image') ) : ?>
     <img src="<?php echo get_field('laptop_image'); ?>" class="for-laptop" />
+    <?php endif; ?>
+    <?php if( get_field('tablet_image') ) : ?>
     <img src="<?php echo get_field('tablet_image'); ?>" class="for-tablet" />
+    <?php endif; ?>
+    <?php if( get_field('mobile_image') ) : ?>
     <img src="<?php echo get_field('mobile_image'); ?>" class="for-mobile" />
+    <?php endif; ?>
     <div class="text-wrapper">
-        <h1 class="heading"><?php echo get_field('heading'); ?></h1>
+        <h1 class="heading"><?php echo get_field('heading') ? get_field('heading') : get_the_title(); ?></h1>
     </div>
 </section>
 
 <section class="single-region-description">
     <div class="container">
-    <h3 class="heading for-mobile"><?php echo get_field('description_heading'); ?></h3>
-        <div class="container-wrapper">
-            <img src="<?php echo get_field('description_image'); ?>" class="description-image" /> 
-            <div class="text-with-map-content">
-                <div class="text-wrapper">
-                    <h3 class="heading"><?php echo get_field('description_heading'); ?></h3>
-                    <div class="wysiwyg-content">
-                        <?php echo get_field('description'); ?> 
-                    </div>
-                </div>
-                <img src="<?php echo get_field('map'); ?>" class="map-placeholder" /> 
+        <div class="top-wrapper d-flex">
+            <h3 class="heading"><?php echo get_field('description_heading'); ?></h3>
+            <div class="map-placeholder">
+                <img src="<?php echo get_field('map'); ?> "> 
             </div>
+        </div>
+        <div class="container-wrapper d-flex">
+            <img src="<?php echo get_field('description_image'); ?> ">   
+            <div class="wysiwyg-content">
+                <?php echo get_field('description'); ?> 
+            </div>
+            <div id="custom-map-render">
+                <div class="custom-map" data-zoom="19">
+                    <?php 
+
+                    foreach( get_field('tour_destinations') as $key => $destination ) {
+                        $latitude = $destination['latitude'];
+                        $longtitude = $destination['longitude'];
+                        $mapMarkerIndex = $key + 1;
+
+                        // switch( $mapMarkerIndex ){
+                        //     case 1: $mapMarkerImage = get_stylesheet_directory_uri() . '/inc/images/one.png'; break;
+
+                        //     case 2: $mapMarkerImage = get_stylesheet_directory_uri() . '/inc/images/two.png'; break;
+                        // }
+
+                        ?>
+
+                    <div class="marker marker-destination d-none" data-destination-count="<?= $key + 1; ?>" data-lat="<?= esc_attr($latitude); ?>" data-lng="<?= esc_attr($longtitude); ?>" data-pin-image="<?= $mapMarkerIndex; ?>">
+
+                    </div>
+                    <?php
+                    }
+                        
+
+                    ?>
+                </div>
+            </div>
+            <!-- <div class="map-placeholder">
+                <img src="<?php echo get_field('map'); ?> "> 
+            </div> -->
         </div>
     </div>
 </section>
@@ -53,23 +88,27 @@ get_header();
 <section class="single-region-about">
     <div class="container">
         <div class="container-wrapper">
-            <div class="about-content">
-                <div class="image-wrapper">
-                    <?php foreach( get_field('about_image') as $content ) : ?>
-                        <img src="<?php echo $content['image'];?> "> 
-                    <?php endforeach; ?>
+            <h3 class="heading"><?php echo get_field('about_heading'); ?></h3>
+            <?php foreach( get_field('tour_destinations') as $key => $destination ) : ?>
+                <div class="about-content d-flex">
+                    <div class="image-wrapper">
+                        <img src="<?php echo $destination['image'];?> "> 
+                    </div>
+                    <div class="about-content-wrapper">
+                        <div class="wysiwyg-content">
+                            <?php echo $destination['details']; ?>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="text-wrapper">
-                    <h3 class="heading"><?php echo get_field('about_heading'); ?></h3>
-                    <div class="wysiwyg-content"><?php echo get_field('about_description'); ?></div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
 
 <section class="single-region-summary">
     <div class="container">
+        <h3 class="heading"><?php echo get_field('summary_heading'); ?></h3>
         <div class="container-wrapper d-flex">
             <div class="summary-image">
                 <?php foreach( get_field('summary_image') as $content ) : ?>
@@ -77,16 +116,15 @@ get_header();
                 <?php endforeach; ?>
             </div>
             <div class="summary-content-wrapper">
-                <h3 class="heading"><?php echo get_field('summary_heading'); ?></h3>
                 <div class="summary-content">
                     <?php foreach( get_field('summary_content') as $content ) : ?>
                         <p class="summary-labels"><?php echo $content['summary_labels'];?></p>
                         <p class="summary-labels-description"><?php echo $content['summary_labels_description'];?></p>
                     <?php endforeach; ?>
                 </div>      
-                <div class="contact-us-content">
-                    <h3 class="heading">Contact Us</h3>
-                    <div class="wysiwyg-content"><?php echo get_field('contact_content'); ?></div>
+                <h3 class="heading">Contact Us</h3>
+                <div class="wysiwyg-content">
+                    <?php echo get_field('contact_content'); ?>
                 </div>
             </div>
         </div>
