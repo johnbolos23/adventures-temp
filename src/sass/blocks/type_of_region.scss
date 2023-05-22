@@ -1,22 +1,62 @@
 section.types-of-region {
     .container-wrapper {
-        padding: 0 45px;
-        margin-top: 116px;
+        padding: 116px 88px;
+        @media (max-width: 1399px) {
+            padding: 80px 38px 103px;
+        }
+        @media (max-width: 1200px) {
+            padding: 83px 28px;
+        }
+        @media (max-width: 767px) {
+            padding: 74px 0;
+        }
         .row {
             justify-content: center;
+            @media (max-width: 1200px) {
+                justify-content: unset;
+            }
             .col-xxl-4 {
                 align-self: self-end;
+                padding-bottom: 70px;
+                @media (max-width: 1399px) {
+                    padding-bottom: 89px;
+                }
+                @media (max-width: 1200px) {
+                    padding-bottom: 56px;
+                    align-self: unset;
+                }
+                @media (max-width: 767px) {
+                    padding-bottom: 39px;
+                }
                 .icon {
                     margin-bottom: 32px;
+                    @media (max-width: 767px) {
+                        margin-bottom: 24px;
+                    }
+                    svg {
+                        @media (max-width: 1399px) {
+                            width: 80px;
+                            height: 80px;
+                        }
+                        @media (max-width: 767px) {
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
                 }
                 h6 {
-                    font-style: normal;
                     font-weight: 500;
                     font-size: 28px;
                     line-height: 120%;
                     letter-spacing: -0.02em;
                     color: #203940;
                     margin-bottom: 6px;
+                    @media (max-width: 1399px) {
+                        font-size: 24px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 20px;
+                    }
                 }
                 p {
                     font-weight: 400;
@@ -24,7 +64,27 @@ section.types-of-region {
                     line-height: 170%;
                     color: #13272C;
                     opacity: 0.7;
-                    margin-bottom: 70px;
+                    margin-bottom: 0;
+                    @media (max-width: 1399px) {
+                        font-size: 16px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 14px;
+                    }
+                }
+                &:nth-last-of-type(-n+2) {
+                    padding-bottom: 0;
+                    @media (max-width: 1200px) {
+                        padding-bottom: 56px;
+                    }
+                    @media (max-width: 767px) {
+                        padding-bottom: 39px;
+                    }
+                }
+                &:last-child {
+                    @media (max-width: 1200px) {
+                        padding-bottom: 0;
+                    }
                 }
             }
         }

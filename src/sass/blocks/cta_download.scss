@@ -1,0 +1,224 @@
+section.cta-download {
+    .container-wrapper {
+        padding: 97px 342px 61px;
+        @media (max-width: 1700px) {
+            padding: 72px 238px 57px;
+            display: flex;
+            justify-content: center;
+        }
+        @media (max-width: 1200px) {
+            padding: 60px 28px 30px;
+        }
+        @media (max-width: 767px) {
+            padding: 48px 0 10px;
+        }
+        .content {
+            background: #F1F5F6;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 31px 44px 31px 38px;
+            @media (max-width: 1399px) {
+                padding: 28px;
+                align-items: center;
+                width: fit-content;
+            }
+            @media (max-width: 767px) {
+                display: grid;
+                grid-template-columns: 56px 1fr;
+                row-gap: 28px;
+            }
+            svg {
+                @media (max-width: 1399px) {
+                    max-width: 56px;
+                    height: 56px;
+                }
+            }
+            .text-wrapper {
+                padding: 0 182px 0 24px;
+                @media (max-width: 1399px) {
+                    padding: 0 96px 0 24px;
+                }
+                @media (max-width: 1200px) {
+                    padding: 0 110px 0 24px;
+                }
+                @media (max-width: 767px) {
+                    padding: 0 0 0 24px;
+                }
+                .file-name {
+                    // font-family: 'Cera Pro';
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 120%;
+                    letter-spacing: -0.02em;
+                    color: #203940;
+                    @media (max-width: 1399px) {
+                        font-size: 20px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 18px;
+                        // max-width: 208px;
+                    }
+                }
+                .file-size {
+                    // font-family: 'Cera Pro';
+                    font-size: 18px;
+                    line-height: 170%;
+                    color: #13272C;
+                    opacity: 0.7;
+                    @media (max-width: 1399px) {
+                        font-size: 16px;
+                    }
+                    @media (max-width: 767px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .cta-download-button {
+                // font-family: 'Cera Pro';
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                width: 177px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #000000;
+                backdrop-filter: blur(10px);
+                @media (max-width: 1399px) {
+                    font-size: 14px;
+                    max-width: 164px;
+                    height: 54px;
+                }
+                @media (max-width: 767px) {
+                    font-size: 12px;
+                    max-width: 151px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}
+
+// section.cta-download {
+//     .container-wrapper {
+//         margin: 97px 0 61px;
+//         padding: 0 45px;
+//         @media (max-width: 1399px) {
+//             padding: 0 38px;
+//             margin: 72px 0 57px;
+//         }
+//         @media (max-width: 1200px) {
+//             padding: 0 28px;
+//             margin: 60px 0 30px;
+//         }
+//         @media (max-width: 767px) {
+//             padding: 0;
+//             margin: 48px 0 10px;
+//         }
+//         .row {
+//             .download-wrapper {
+//                 background: #F1F5F6;
+//                 width: 996px;
+//                 padding: 31px 44px 32px 38px;
+//                 @media (max-width: 1399px) {
+//                     width: 779px;
+//                     padding: 28px;
+//                 }
+//                 @media (max-width: 1200px) {
+//                     width: 685px;
+//                     display: flex;
+//                     align-items: center;
+//                 }
+//                 @media (max-width: 767px) {
+//                     width: 336px;
+//                     display: block;
+//                     padding: 28px 0 28px 28px;
+//                 }
+//                 svg {
+//                     vertical-align: top;
+//                     @media (max-width: 1399px) {
+//                         width: 56px;
+//                         height: 56px;
+//                     }
+//                 }
+//                 .download-content {
+//                     display: inline-block;
+//                     padding-left: 24px;
+//                     padding-right: 182px;
+//                     @media (max-width: 1399px) {
+//                         padding-right: 96px;
+//                     }
+//                     @media (max-width: 1200px) {
+//                         padding-right: 110px;
+//                     }
+//                     @media (max-width: 767px) {
+//                         padding-right: 0;
+//                         padding-bottom: 28px;
+//                     }
+//                     p {
+//                         font-weight: 500;
+//                         font-size: 24px;
+//                         line-height: 120%;
+//                         letter-spacing: -0.02em;
+//                         color: #203940;
+//                         margin-bottom: initial;
+//                         @media (max-width: 1399px) {
+//                             font-size: 20px;
+//                         }
+//                         @media (max-width: 1200px) {
+//                             width: 275px;
+//                         }
+//                         @media (max-width: 767px) {
+//                             font-size: 18px;
+//                             width: 208px;
+//                         }
+//                     }
+//                     p.file-size {
+//                         font-weight: 400;
+//                         font-size: 18px;
+//                         line-height: 170%;
+//                         color: #13272C;
+//                         opacity: 0.7;
+//                         @media (max-width: 1399px) {
+//                             font-size: 16px;
+//                         }
+//                         @media (max-width: 767px) {
+//                             font-size: 14px;
+//                         }
+//                     }
+//                 }
+//                 .btn.cta-download-button {
+//                     // font-family: 'Cera Pro';
+//                     font-weight: 500;
+//                     font-size: 16px;
+//                     line-height: 100%;
+//                     letter-spacing: 0.1em;
+//                     text-transform: uppercase;
+//                     color: #FFFFFF;
+//                     width: 177px;
+//                     height: 60px;
+//                     background: #000000;
+//                     display: inline-flex;
+//                     align-items: center;
+//                     justify-content: center;
+//                     vertical-align: top;
+//                     border-radius: none;
+//                     @media (max-width: 1399px) {
+//                         font-size: 14px;
+//                         width: 164px;
+//                         height: 54px;
+//                     }
+//                     @media (max-width: 767px) {
+//                         font-size: 12px;
+//                         width: 151px;
+//                         height: 50px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

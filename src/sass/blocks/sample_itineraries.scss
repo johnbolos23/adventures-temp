@@ -1,0 +1,229 @@
+section.sample-itineraries {
+    padding-bottom: 89px;
+    @media (max-width: 1399px) {
+        padding-bottom: 50px;
+    }
+    @media (max-width: 1054px) {
+        padding-bottom: 30px;
+    }
+    @media (max-width: 767px) {
+        padding-bottom: 10px;
+    }
+    .container {
+        padding: 0;
+        @media (max-width: 767px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .container-wrapper {
+            margin-top: 92px;
+            padding: 0 85px;
+            @media (max-width: 1399px) {
+                margin-top: 88px;
+            }
+            @media (max-width: 1399px) {
+                margin-top: 88px;
+                padding: 0px 50px;
+            }
+            @media (max-width: 1200px) {
+                margin-top: 30px;
+                padding: 0px 40px;
+            }
+            @media (max-width: 767px) {
+                margin-top: 24px;
+                padding: 0px;
+            }
+            .row {
+                margin: 0;
+                .col-xxl-12 {
+                    padding: 0;
+                    .sample-itineraries-content {
+                        display: flex;
+                        align-items: center;
+                        padding: 0px 9px 0px 0px;
+                        margin-bottom: 50px;
+                        box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+                        @media (max-width: 1399px) {
+                            margin-bottom: 36px;
+                            padding: 0px 24px 0px 0px;
+                        }
+                        @media (max-width: 1200px) {
+                            margin-top: 42px;
+                            margin-bottom: 0;
+                        }
+                        @media (max-width: 1054px) {
+                            display: block;
+                            padding: 0;
+                        }
+                        @media (max-width: 767px) {
+                            margin-top: 36px
+                        }
+                        .for-desktop {
+                            @media (max-width: 1460px) {
+                                width: 281px;
+                                height: 350px;
+                            }
+                            @media (max-width: 1054px) {
+                                display: none;
+                            }
+                        }
+                        .for-tablet {
+                            display: none;
+                            @media (max-width: 1054px) {
+                                display: block;
+                                width: -webkit-fill-available;
+                            }
+                        }
+                        .sample-itineraries-title-for-tablet {
+                            display: none;
+                            @media (max-width: 1054px) {
+                                font-size: 28px;
+                                line-height: 120%;
+                                letter-spacing: -0.02em;
+                                color: #13272C;
+                                display: block;
+                                margin: 36px 0px 14px 36px;
+                            }
+                            @media (max-width: 767px) {
+                                font-size: 24px;
+                                line-height: 120%;
+                                display: block;
+                                margin: 24px 24px 14px 24px;
+                            }
+                        }
+                        .inner-wrapper {
+                            display: contents;
+                            @media (max-width: 1054px) {
+                                display: flex;
+                                padding-right: 24px;
+                                padding-bottom: 29px;
+                            }
+                            @media (max-width: 767px) {
+                                display: inherit;
+                                padding-right: 0;
+                                padding-bottom: 10px;
+                            }
+                            .text-content {
+                                padding-left: 69px;
+                                padding-right: 49px;
+                                @media (max-width: 1399px) {
+                                    padding: 0px 46px 0px 35px;
+                                }
+                                @media (max-width: 992px) {
+                                    padding: 0px 0px 0px 26px;
+                                    display: inline-block;
+                                }
+                                @media (max-width: 1054px) {
+                                    padding: 0px 0px 0px 36px;
+                                    display: inline-block;
+                                }
+                                // @media (max-width: 1054px) {
+                                //     padding: 0px 0px 0px 24px;
+                                //     display: inline-block;
+                                // }
+                                @media (max-width: 767px) {
+                                    padding: 0px 24px 0px 24px;
+                                    display: inline-block;
+                                }
+                                .sample-itineraries-title-for-desktop  {
+                                    font-weight: 500;
+                                    font-size: 36px;
+                                    line-height: 120%;
+                                    letter-spacing: -0.02em;
+                                    color: #13272C;
+                                    margin-bottom: 14px;
+                                    @media (max-width: 1399px) {
+                                        font-size: 28px;
+                                    }
+                                    @media (max-width: 1054px) {
+                                        display: none;
+                                    }
+                                }
+                                .wysiwyg-destination {
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    line-height: 150%;
+                                    letter-spacing: -0.02em;
+                                    color: #203940;
+                                    opacity: 0.7;
+                                    margin-bottom: 31px;
+                                    @media (max-width: 1399px) {
+                                        font-size: 14px;
+                                    }
+                                    @media (max-width: 767px) {
+                                        font-size: 12px;
+                                        margin-bottom: 16px;
+                                    }
+                                }
+                                .sample-itineraries-description {
+                                    font-weight: 400;
+                                    font-size: 18px;
+                                    line-height: 170%;
+                                    color: #13272C;
+                                    opacity: 0.7;
+                                    margin-bottom: 0;
+                                    @media (max-width: 1399px) {
+                                        font-size: 16px;
+                                    }
+                                    @media (max-width: 1054px) {
+                                        width: 506px;
+                                        margin-right: 36px;
+                                    }
+                                    @media (max-width: 890px) {
+                                        width: 375px;
+                                    }
+                                    @media (max-width: 767px) {
+                                        margin-right: 0;
+                                        font-size: 16px;
+                                        width: auto;
+                                    }
+                                }
+                            }
+                            .map-placeholder {
+                                @media (max-width: 1399px) {
+                                    width: 299px;
+                                }
+                                @media (max-width: 992px) {
+                                    width: 217px;
+                                }
+                                @media (max-width: 767px) {
+                                    padding-top: 24px;
+                                    display: block;
+                                    margin: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+                .more-itineraries {
+                    background: #000000;
+                    color: #FFFFFF;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 100%;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    width: 237px;
+                    height: 60px;
+                    border-radius: initial;
+                    margin: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @media (max-width: 1399px) {
+                        margin-top: 6px;
+                        font-size: 14px;
+                        width: 217px;
+                        height: 54px;
+                    }
+                    @media (max-width: 1200px) {
+                        margin-top: 42px;
+                    }
+                    @media (max-width: 1054px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

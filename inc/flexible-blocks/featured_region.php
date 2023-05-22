@@ -93,6 +93,9 @@ $theQuery = new WP_Query( $args );
                         $regionLocation .= $category->name;
                     }
 
+						if( !$latitude && !$longtitude ){
+							continue;
+						}
                     ?>
 
                     <div class="marker d-none" data-title="<?= get_the_title(); ?>" data-color="<?= $color; ?>" data-lat="<?= esc_attr($latitude); ?>" data-lng="<?= esc_attr($longtitude); ?>" data-layout-type="<?= $layoutType; ?>">

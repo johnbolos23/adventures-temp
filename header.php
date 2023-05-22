@@ -40,41 +40,44 @@ $navbar_type       = get_theme_mod('understrap_navbar_type', 'collapse');
 		<!-- ******************* The Navbar Area ******************* -->
 		<header class="main-header" id="main-header">
 			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-auto">
-						<div class="col-wrapper">
-							<a href="<?= site_url(); ?>">
-								<img src="<?= get_field('logo','option'); ?>" alt="Site Logo" />
-							</a>
+				<div class="container-wrapper">
+					<div class="row g-0 align-items-center">
+						<div class="col-xxl-2 col-xl-2 col-lg-4 col-md-5 col-7 left">
+							<div class="col-wrapper">
+								<a href="<?= site_url(); ?>">
+									<img src="<?= get_field('logo','option'); ?>" alt="Site Logo" />
+								</a>
+							</div>
 						</div>
-					</div>
-					<div class="col-6 col-lg-6">
-						<div class="col-wrapper header-search">
-							<form action="/" id="header-search">
-								<div class="search-input">
-									<input type="text" name="s" placeholder="Search..." />
-									<button type="submit"><?= get_template_part('inc/svg/search'); ?></button>
-								</div>
-							</form>
+						<div class="col-xxl-6 col-xl-5 col-lg-7 col-md-6 col-2 middle">
+							<div class="col-wrapper header-search">
+								<form action="<?php echo site_url(); ?>" id="header-search">
+									<div class="search-input">
+										<input type="text" name="s" placeholder="Search..." />
+										<button type="submit"><?= get_template_part('inc/svg/search'); ?></button>
+									</div>
+								</form>
+								<button type="submit" class="for-mobile"><?= get_template_part('inc/svg/search'); ?></button>
+							</div>
 						</div>
-					</div>
-					<div class="col-one">
-						<div class="col-wrapper header-email-hamburger-wrapper">
-							<div class="row align-items-center">
-								<div class="col-one">
-									<div class="header-email">
-										<span><?= get_template_part('inc/svg/email'); ?></span>
-										<div class="header-email-details">
-											<span>Have a question? Send us a message</span>
-											<?php 
-												$emailLink = strip_tags( get_field('email_address','option') );
-											?>
-											<a href="mailto:<?= $emailLink; ?>"><?= get_field('email_address','option'); ?></a>
+						<div class="col-xxl-4 col-xl-5 col-lg-1 col-md-1 col-3 right">
+							<div class="col-wrapper header-email-hamburger-wrapper">
+								<div class="row g-0 align-items-center">
+									<div class="col">
+										<div class="header-email">
+											<span><?= get_template_part('inc/svg/email'); ?></span>
+											<div class="header-email-details">
+												<span>Have a question? Send us a message</span>
+												<?php 
+													$emailLink = strip_tags( get_field('email_address','option') );
+												?>
+												<a href="mailto:<?= $emailLink; ?>"><?= get_field('email_address','option'); ?></a>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="col-auto">
-									<button type="button" id="hamburger-button"><?= get_template_part('inc/svg/hamburger'); ?></button>
+									<div class="col-auto">
+										<button type="button" id="hamburger-button"><?= get_template_part('inc/svg/hamburger'); ?></button>
+									</div>
 								</div>
 							</div>
 						</div>

@@ -1,12 +1,47 @@
 (function ($) {
     $(function () {
+
+        $arrowLeft = '<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.4" filter="url(#filter0_b_348_715)"><rect width="60" height="60" rx="30" transform="matrix(-1 0 0 1 60 0)" fill="black" fill-opacity="0.6"/><path d="M33.5 23L26.5 30L33.5 37" stroke="white" stroke-width="4" stroke-linecap="round"/></g><defs><filter id="filter0_b_348_715" x="-20" y="-20" width="100" height="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="10"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_348_715"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_348_715" result="shape"/></filter></defs></svg>';
+        $arrowRight = '<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_b_348_713)"><rect width="60" height="60" rx="30" fill="black" fill-opacity="0.6"/><path d="M26.5 23L33.5 30L26.5 37" stroke="white" stroke-width="4" stroke-linecap="round"/></g><defs><filter id="filter0_b_348_713" x="-20" y="-20" width="100" height="100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feGaussianBlur in="BackgroundImageFix" stdDeviation="10"/><feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_348_713"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_348_713" result="shape"/></filter></defs></svg>';
+
+        if( $(".post-item-slider").length !== 0 ){
+            $(".post-item-slider").slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: true,
+                adaptiveHeight: false,
+                prevArrow: '<button class="slick-arrow slick-prev">'+ $arrowLeft +'</button>',
+                nextArrow: '<button class="slick-arrow slick-next">'+ $arrowRight +'</button>',
+                responsive: [
+					{
+						breakpoint: 1200,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 1,
+							arrows: true,
+						},
+                    },
+                    {
+                        breakpoint: 768,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							arrows: true,
+						},
+                    },
+				],
+            });
+
+        }
+
         if ($(".banner-main-slider").length !== 0) {
 			$(".banner-main-slider").slick({
 				slidesToShow: 1,
 				dots: true,
 				arrows: false,
                 autoplay: true,
-                autoplaySpeed: 5000,
+                autoplaySpeed: 3000,
                 speed: 500,
                 fade: true,
                 cssEase: 'linear'

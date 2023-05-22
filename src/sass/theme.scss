@@ -8,6 +8,7 @@
 @import "theme/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
 @import "theme/taxonomy-regions_tax";
 @import "theme/single-regions";
+@import "theme/search";
 
 
 
@@ -26,3 +27,13 @@
 @import "blocks/featured_post";
 @import "blocks/image_with_text";
 @import "blocks/type_of_region";
+@import "blocks/steps";
+@import "blocks/cta_download";
+@import "blocks/banner";
+@import "blocks/popular_combinations"; 
+@import "blocks/sample_itineraries";
+@import "blocks/frequently_asked_questions";
+@import "blocks/contact_us";
+@import "blocks/region_description";
+@import "blocks/list_of_adventures";
+@import "blocks/region_post_slider";

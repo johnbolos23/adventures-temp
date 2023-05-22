@@ -4,76 +4,127 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 ?>
+<?php  $theRegionType = get_the_terms( get_the_ID(), 'regions_tax' ); ?>
 
 <section class="breadcrumbs-section">
     <div class="container">
-        <a href="<?= site_url(); ?>">Home</a>
-        <?= get_template_part('inc/svg/chevron-right'); ?>
-        <span><b><?= get_the_title(); ?></b></span>
+        <div class="container-wrapper">
+            <a href="<?= site_url(); ?>">Home</a>
+            
+            <?php if( $theRegionType ) : ?>
+                <?= get_template_part('inc/svg/chevron-right'); ?>
+                <a href="<?= get_term_link( $theRegionType[0]->term_id ); ?>"><?= $theRegionType[0]->name; ?></a>
+            <?php endif; ?>
+
+            <?= get_template_part('inc/svg/chevron-right'); ?>
+            <span><b><?= get_the_title(); ?></b></span>
+        </div>
     </div>
 </section>
 
-<section class="region-header pos-relative" style="background-image: url(<?php echo get_field('image'); ?>);" id="region-header-<?= get_row_index(); ?>">
-    <div class="container pos-relative">
-        <h1 class="heading"><?php echo get_field('heading'); ?></h1>
+<section class="single-region-header pos-relative" id="single-region-header-<?= get_row_index(); ?>">
+    <img src="<?php echo get_field('desktop_image') ? get_field('desktop_image') : get_the_post_thumbnail_url(); ?>" class="for-desktop" />
+    <?php if( get_field('laptop_image') ) : ?>
+    <img src="<?php echo get_field('laptop_image'); ?>" class="for-laptop" />
+    <?php endif; ?>
+    <?php if( get_field('tablet_image') ) : ?>
+    <img src="<?php echo get_field('tablet_image'); ?>" class="for-tablet" />
+    <?php endif; ?>
+    <?php if( get_field('mobile_image') ) : ?>
+    <img src="<?php echo get_field('mobile_image'); ?>" class="for-mobile" />
+    <?php endif; ?>
+    <div class="text-wrapper">
+        <h1 class="heading"><?php echo get_field('heading') ? get_field('heading') : get_the_title(); ?></h1>
     </div>
 </section>
 
 <section class="single-region-description">
     <div class="container">
-        <div class="row">
-            <div class="col-xxl-3 col-xl-3">
-                <img src="<?php echo get_field('first_image'); ?> ">             
+        <div class="top-wrapper d-flex">
+            <h3 class="heading"><?php echo get_field('description_heading'); ?></h3>
+            <div class="map-placeholder">
+                <img src="<?php echo get_field('map'); ?> "> 
             </div>
-            <div class="col-xxl-5 col-xl-5">
-                <h3><?php echo get_field('first_heading'); ?></h3>
-                <?php echo get_field('first_content'); ?>
+        </div>
+        <div class="container-wrapper d-flex">
+            <img src="<?php echo get_field('description_image'); ?> ">   
+            <div class="wysiwyg-content">
+                <?php echo get_field('description'); ?> 
             </div>
-            <div class="col-xxl-4 col-xl-4 text-center">
-                <div class="map">
-                    MAP HERE
+            <div id="custom-map-render">
+                <div class="custom-map" data-zoom="19">
+                    <?php 
+
+                    foreach( get_field('tour_destinations') as $key => $destination ) {
+                        $latitude = $destination['latitude'];
+                        $longtitude = $destination['longitude'];
+                        $mapMarkerIndex = $key + 1;
+
+                        // switch( $mapMarkerIndex ){
+                        //     case 1: $mapMarkerImage = get_stylesheet_directory_uri() . '/inc/images/one.png'; break;
+
+                        //     case 2: $mapMarkerImage = get_stylesheet_directory_uri() . '/inc/images/two.png'; break;
+                        // }
+
+                        ?>
+
+                    <div class="marker marker-destination d-none" data-destination-count="<?= $key + 1; ?>" data-lat="<?= esc_attr($latitude); ?>" data-lng="<?= esc_attr($longtitude); ?>" data-pin-image="<?= $mapMarkerIndex; ?>">
+
+                    </div>
+                    <?php
+                    }
+                        
+
+                    ?>
                 </div>
             </div>
+            <!-- <div class="map-placeholder">
+                <img src="<?php echo get_field('map'); ?> "> 
+            </div> -->
         </div>
     </div>
 </section>
 
-
 <section class="single-region-about">
     <div class="container">
-        <div class="row">
-            <div class="col-xxl-3 col-xl-3">
-                <img class="second_image" src="<?php echo get_field('second_image'); ?> "> 
-                <img src="<?php echo get_field('third_image'); ?> "> 
-                <img src="<?php echo get_field('fourth_image'); ?> "> 
-            </div>
-            <div class="col-xxl-9 col-xl-9">
-                <h3><?php echo get_field('second_heading'); ?></h3>
-                <?php echo get_field('second_content'); ?>
-            </div>
+        <div class="container-wrapper">
+            <h3 class="heading"><?php echo get_field('about_heading'); ?></h3>
+            <?php foreach( get_field('tour_destinations') as $key => $destination ) : ?>
+                <div class="about-content d-flex">
+                    <div class="image-wrapper">
+                        <img src="<?php echo $destination['image'];?> "> 
+                    </div>
+                    <div class="about-content-wrapper">
+                        <div class="wysiwyg-content">
+                            <?php echo $destination['details']; ?>
+                        </div>
+                    </div>
+                    
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
 
 <section class="single-region-summary">
     <div class="container">
-        <div class="row">
-            <div class="col-xxl-3 col-xl-3">
-                    <img src="<?php echo get_field('fifth_image'); ?> "> 
-                    <img src="<?php echo get_field('sixth_image'); ?> "> 
-                </div>
-                <div class="col-xxl-9 col-xl-9">
-                    <h3>Summary</h3>
-                    <?php foreach( get_field('summary') as $item ) : ?>
-                        <div class="test">
-                            <p class="summary_labels"><?php echo $item['summary_labels'];?></p>
-                            <p class="summary_labels_description"><?php echo $item['summary_labels_description'];?></p>
-                        </div>
+        <h3 class="heading"><?php echo get_field('summary_heading'); ?></h3>
+        <div class="container-wrapper d-flex">
+            <div class="summary-image">
+                <?php foreach( get_field('summary_image') as $content ) : ?>
+                    <img src="<?php echo $content['image'];?> "> 
+                <?php endforeach; ?>
+            </div>
+            <div class="summary-content-wrapper">
+                <div class="summary-content">
+                    <?php foreach( get_field('summary_content') as $content ) : ?>
+                        <p class="summary-labels"><?php echo $content['summary_labels'];?></p>
+                        <p class="summary-labels-description"><?php echo $content['summary_labels_description'];?></p>
                     <?php endforeach; ?>
-                    <div class="contact_us">
-                        <h3>Contact Us</h3>
-                        <?php echo get_field('contact_us_content'); ?>
-                    </div>
+                </div>      
+                <h3 class="heading">Contact Us</h3>
+                <div class="wysiwyg-content">
+                    <?php echo get_field('contact_content'); ?>
                 </div>
             </div>
         </div>

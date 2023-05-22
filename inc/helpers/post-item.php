@@ -1,4 +1,4 @@
-<div class="col-12 col-md-6 col-lg-3 post-item">
+<div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-12 post-item">
     <div class="post-item-container">
         <div class="post-item-wrapper pos-relative">
             <img src="<?php echo get_sub_field('image') ? get_sub_field('image') : get_the_post_thumbnail_url(); ?>" />
