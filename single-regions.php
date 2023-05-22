@@ -42,9 +42,6 @@ get_header();
     <div class="container">
         <div class="top-wrapper d-flex">
             <h3 class="heading"><?php echo get_field('description_heading'); ?></h3>
-            <div class="map-placeholder">
-                <img src="<?php echo get_field('map'); ?> "> 
-            </div>
         </div>
         <div class="container-wrapper d-flex">
             <img src="<?php echo get_field('description_image'); ?> ">   
